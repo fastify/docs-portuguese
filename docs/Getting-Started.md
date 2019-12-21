@@ -202,7 +202,7 @@ Para investigar a fundo como os plugins funcionam no Fastify, como implementar n
 
 <a name="plugin-loading-order"></a>
 ### Ordem de carregamento dos plugins
-Para garantir a consistência e previsibilidade de comportamentos de sua aplicação sugerimos efusivamente para sempre carregar seu código como mostrado abaixo:
+Para garantir a consistência e previsibilidade de comportamentos de sua aplicação sugerimos efusivamente sempre carregar seu código como mostrado abaixo:
 ```
 └── plugins (do ecossistema Fastify)
 └── seus plugins (seus plugins personalizados)
