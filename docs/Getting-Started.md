@@ -2,7 +2,7 @@
 
 ## 'Aquecendo'
 Olá! Obrigado por conferir o Fastify!<br>
-Este documento visa em apresentar amigávelmente o framework e suas funcionalidades. Sendo um prefácio elementar com exemplos e links para outras partes da documentação.<br>
+Este documento visa em apresentar amigavelmente o framework e suas funcionalidades. Sendo um prefácio elementar com exemplos e links para outras partes da documentação.<br>
 Iniciemos!
 
 <a name="install"></a>
