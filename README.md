@@ -169,7 +169,7 @@ Benchmarks utilizando https://github.com/fastify/benchmarks. Este é um sintéti
 * <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/TypeScript.md"><code><b>TypeScript e suporte a tipagem</b></code></a>
 * <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Serverless.md"><code><b>Sem servidor</b></code></a>
 
-Documentação[English](https://github.com/fastify/fastify/blob/master/README.md)
+Documentation[English](https://github.com/fastify/fastify/blob/master/README.md)
 中文文档[地址](https://github.com/fastify/docs-chinese/blob/master/README.md)
 
 ## Ecossistema
