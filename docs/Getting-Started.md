@@ -127,7 +127,7 @@ O Fastify cuida disso internamente, sem o menor esforço!
 Primeiro, instale o `fastify-plugin` e o `mongodb`:
 
 ```
-npm install --save fastify-plugin
+npm install --save fastify-plugin mongodb
 ```
 
 **server.js**
