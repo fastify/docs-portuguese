@@ -425,4 +425,4 @@ Se você declarar múltiplas versões com o mesmo Major or Minor, Fastify irá s
 Se a requisição não tem o cabeçalho `Accept-Version` definido, retornará um erro `404`.
 
 #### Custom
-É possível definir uma lógica personalizada de versionamento. Que pode ser realizado através da configuração [`versioning`](https://github.com/fastify/docs-portuguese/blob/master/docs/Server.md#versioning) configuration, enquanto cria a instãncia do servidor Fastify.
+É possível definir uma lógica personalizada de versionamento. Que pode ser realizado através da configuração [`versioning`](https://github.com/fastify/docs-portuguese/blob/master/docs/Server.md#versioning), enquanto cria a instãncia do servidor Fastify.
