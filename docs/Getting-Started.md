@@ -7,11 +7,11 @@ Iniciemos!
 
 <a name="install"></a>
 ### Instalação
-Install with npm:
+Instalação via npm:
 ```
 npm i fastify --save
 ```
-Install with yarn:
+Instalação via yarn:
 ```
 yarn add fastify
 ```
