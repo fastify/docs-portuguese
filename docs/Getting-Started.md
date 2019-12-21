@@ -2,16 +2,16 @@
 
 ## 'Aquecendo'
 Olá! Obrigado por conferir o Fastify!<br>
-Este documento visa em apresentar amigávelmente o framework e suas funcionalidades. Sendo um prefácio elementar com exemplos e links para outras partes da documentação.<br>
+Este documento visa em apresentar amigavelmente o framework e suas funcionalidades. Sendo um prefácio elementar com exemplos e links para outras partes da documentação.<br>
 Iniciemos!
 
 <a name="install"></a>
 ### Instalação
-Install with npm:
+Instalação via npm:
 ```
 npm i fastify --save
 ```
-Install with yarn:
+Instalação via yarn:
 ```
 yarn add fastify
 ```
@@ -83,7 +83,7 @@ Fastify oferece uma plataforma simples que ajuda a resolver todos os problemas m
 
 <a name="first-plugin"></a>
 ### Primeiro plugin
-Siminar ao fato de que em JavaScript tudo é um objeto, As with JavaScript, no Fastify tudo é um plugin.<br>
+Siminar ao fato de que em JavaScript tudo é um objeto, no Fastify tudo é um plugin.<br>
 Antes de aprofundarmos, vamos ver como funciona!<br>
 Vamos declarar nosso servidor básico, contudo, ao invés de declarar a rota dentro arquivo principal, iremos declará-lo em um arquivo separado (confira a documentação [declaração de rotas](https://github.com/fastify/docs-portuguese/blob/master/docs/Routes.md)).
 ```js
@@ -202,7 +202,7 @@ Para investigar a fundo como os plugins funcionam no Fastify, como implementar n
 
 <a name="plugin-loading-order"></a>
 ### Ordem de carregamento dos plugins
-Para garantir a consistência e previsibilidade de comportamentos de sua aplicação sugerimos efusivamente para sempre carregar seu código como mostrado abaixo:
+Para garantir a consistência e previsibilidade de comportamentos de sua aplicação sugerimos efusivamente sempre carregar seu código como mostrado abaixo:
 ```
 └── plugins (do ecossistema Fastify)
 └── seus plugins (seus plugins personalizados)
