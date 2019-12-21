@@ -83,7 +83,7 @@ Fastify oferece uma plataforma simples que ajuda a resolver todos os problemas m
 
 <a name="first-plugin"></a>
 ### Primeiro plugin
-Siminar ao fato de que em JavaScript tudo é um objeto, As with JavaScript, no Fastify tudo é um plugin.<br>
+Siminar ao fato de que em JavaScript tudo é um objeto, no Fastify tudo é um plugin.<br>
 Antes de aprofundarmos, vamos ver como funciona!<br>
 Vamos declarar nosso servidor básico, contudo, ao invés de declarar a rota dentro arquivo principal, iremos declará-lo em um arquivo separado (confira a documentação [declaração de rotas](https://github.com/fastify/docs-portuguese/blob/master/docs/Routes.md)).
 ```js
