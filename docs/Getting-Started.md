@@ -121,7 +121,7 @@ Uma solução típica é utilizar de funções 'callback' complexas ou 'promises
 O Fastify cuida disso internamente, sem o menor esforço!
 
 'Uai sô! Simbôra' escrever um exemplo com conexão a um banco de dados.<br>
-*(Nós iremos usar um exemplo simples. Para uma solução mais robusta considere utilizar [`fastify-mongo`](https://github.com/fastify/fastify-mongodb) ou outro do [ecossistema](https://github.com/fastify/fastify/blob/master/docs/Ecosystem.md) Fastify)*
+*(Nós iremos usar um exemplo simples. Para uma solução mais robusta considere utilizar [`fastify-mongo`](https://github.com/fastify/fastify-mongodb) ou outro do [ecossistema](https://github.com/fastify/docs-portuguese/blob/master/docs/Ecosystem.md) Fastify)*
 *(Para esse exemplo você precisa de ter instalada uma versão do MongoDB localmente)*
 
 Primeiro, instale o `fastify-plugin` e o `mongodb`:
