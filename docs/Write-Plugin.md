@@ -39,7 +39,7 @@ Um plugin sem testes não será aceitado em nossa lista de plugins. A falta de t
 Nós não temos uma biblioteca de testes obrigatória. Utilizamos [`tap`](http://www.node-tap.org/) que oferece testes paralelos e cobertura de código prontos para uso, mas cabe a você escolher sua biblioteca de preferências.
 
 ## Linter de código
-Não é obrigatório, mas é altamente recomendável que você use um linter código em seu plugin. Isso garantirá um estilo de código consistente e ajudará a evitar muitos erros.
+Não é obrigatório, mas é altamente recomendável que você use um linter de código em seu plugin. Isso garantirá um estilo de código consistente e ajudará a evitar muitos erros.
 
 Nós usamos [`standard`](https://standardjs.com/) pois funciona sem a necessidade de configurá-lo e é muito fácil integrar em um conjunto de testes.
 
