@@ -44,8 +44,8 @@ Não é obrigatório, mas é altamente recomendável que você use um linter de 
 Nós usamos [`standard`](https://standardjs.com/) pois funciona sem a necessidade de configurá-lo e é muito fácil integrar em um conjunto de testes.
 
 ## Integração Contínua (CI)
-Não é obrigatório, mas se você liberar seu código open source, Integração Contínua ajudará a garantir que as contribuições não quebrem seu plugin e para mostrar que o plugin funciona conforme o esperado. [Travis] (https://travis-ci.org/) é gratuito para projetos de código aberto e fácil de configurar. <br>
-Além disso, você pode ativar serviços como o [Greenkeeper] (https://greenkeeper.io/), que o ajudará a manter suas dependências atualizadas e descobrir se uma nova versão do Fastify tem alguns problemas com seu plugin.
+Não é obrigatório, mas se você liberar seu código open source, Integração Contínua ajudará a garantir que as contribuições não quebrem seu plugin e para mostrar que o plugin funciona conforme o esperado. [Travis](https://travis-ci.org/) é gratuito para projetos de código aberto e fácil de configurar. <br>
+Além disso, você pode ativar serviços como o [Greenkeeper](https://greenkeeper.io/), que o ajudará a manter suas dependências atualizadas e descobrir se uma nova versão do Fastify tem alguns problemas com seu plugin.
 
 ## Vamos começar!
 Ótimo, agora você sabe tudo o que precisa saber sobre como escrever um bom plugin para o Fastify!
