@@ -28,17 +28,17 @@ Disclosure](https://img.shields.io/badge/Security-Responsible%20Disclosure-yello
 
 
 Um servidor eficiente implica em baixo custo de infraestrutura, uma melhor capacidade de resposta sob carga e usuários felizes.
-Como você poderia lidar com os recursos de seu servidor, sabendo que você está provendo o maior número de requesições possível, sem sacrificar validações de segurança e desenvolvimento prático?
+Como lidar eficientemente com os recursos do servidor, provendo o maior número de requisições possível, sem sacrificar validações de segurança e desenvolvimento prático?
 
-Conheça o Fastify. Fastify é um framework web altamente focado em prover a melhor experiência de desenvolvimento com a mínima "dor de cabeça" e com um poderosa arquitetura de plugins. Inspirado no Hapi e Express, contudo, até onde sabemos, é o mais rápido web frameworks na "área".
+Conheça o Fastify. Fastify é um framework web focado em prover a melhor experiência de desenvolvimento com a mínima "dor de cabeça" e com uma poderosa arquitetura de plugins. Inspirado por Hapi e Express, contudo, até onde sabemos, é  um dos web frameworks mais rápido do ecossistema node.
 
 ### Instalação
 
-Install with npm:
+Instalando com npm:
 ```
 npm i fastify --save
 ```
-Install with yarn:
+Instalando com yarn:
 ```
 yarn add fastify
 ```
@@ -46,7 +46,7 @@ yarn add fastify
 ### Exemplo
 
 ```js
-// Declaração, 'importação' e 'instancialização'
+// Importando o framework e instancializando.
 const fastify = require('fastify')({
   logger: true
 })
