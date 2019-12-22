@@ -1,4 +1,4 @@
-# docs-portuguese
+# Documentação em Português (BR)
 <div align="center">
 <img src="https://github.com/fastify/graphics/raw/master/full-logo.png" width="650" height="auto"/>
 </div>
@@ -150,7 +150,7 @@ Benchmarks utilizando https://github.com/fastify/benchmarks. Este é um sintéti
 * <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Routes.md"><code><b>Routes</b></code></a>&#10003;
 * <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Logging.md"><code><b>Logging</b></code></a>&#10003;
 * <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Middleware.md"><code><b>Middleware</b></code></a>&#10003;
-* <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Hooks.md"><code><b>Hooks</b></code></a>
+* <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Hooks.md"><code><b>Hooks</b></code></a>&#10003;
 * <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Decorators.md"><code><b>Decorators</b></code></a>
 * <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Validation-and-Serialization.md"><code><b>Validação e Serialização</b></code></a>
 * <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Fluent-Schema.md"><code><b>Fluent Schema</b></code></a>
