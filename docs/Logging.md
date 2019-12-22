@@ -52,7 +52,7 @@ const fastify = require('fastify')({
 ```
 
 <a name="logging-request-id"></a>
-Por padrão o Fastify adiciona um id para cada requisição para facilitar a identificação. Se estiver presente o header "resquest-id", este valor será usado, caso contrário um novo valor incremental será gerado. Para personalizar esse comportamento veja as propriedade [`requestIdHeader`](https://github.com/fastify/fastify/blob/master/docs/Server.md#factory-request-id-header) e [`genReqId`](https://github.com/fastify/fastify/blob/master/docs/Server.md#gen-request-id) da Factory do Fastify.
+Por padrão o Fastify adiciona um id para cada requisição para facilitar a identificação. Se estiver presente o header "resquest-id", este valor será usado, caso contrário um novo valor incremental será gerado. Para personalizar esse comportamento veja as propriedade [`requestIdHeader`](https://github.com/fastify/docs-portuguese/blob/master/docs/Server.md#factory-request-id-header) e [`genReqId`](https://github.com/fastify/docs-portuguese/blob/master/docs/Server.md#gen-request-id) da Factory do Fastify.
 
 O logger padrão é configurado com um conjunto padrão de serializadores que serializam os objetos com propriedades `req`, `res` e `err`. Esse comportamento pode ser personalizado informando um serializador customizado.
 ```js
@@ -129,7 +129,7 @@ fastify.get('/', function (request, reply) {
 })
 ```
 
-*A instância do logger para a requisição atual está disponível em todas as fases do [ciclo de vida](https://github.com/fastify/fastify/blob/master/docs/Lifecycle.md) do Fastify.*
+*A instância do logger para a requisição atual está disponível em todas as fases do [ciclo de vida](https://github.com/fastify/docs-portuguese/blob/master/docs/Lifecycle.md) do Fastify.*
 
 ## Log Redaction
 

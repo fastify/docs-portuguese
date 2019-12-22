@@ -148,8 +148,8 @@ Benchmarks utilizando https://github.com/fastify/benchmarks. Este é um sintéti
 * <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Getting-Started.md"><code><b>'Aquecendo'</b></code></a>&#10003;
 * <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Server.md"><code><b>Server</b></code></a>&#10003;
 * <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Routes.md"><code><b>Routes</b></code></a>&#10003;
-* <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Logging.md"><code><b>Logging</b></code></a>
-* <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Middleware.md"><code><b>Middleware</b></code></a>
+* <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Logging.md"><code><b>Logging</b></code></a>&#10003;
+* <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Middleware.md"><code><b>Middleware</b></code></a>&#10003;
 * <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Hooks.md"><code><b>Hooks</b></code></a>
 * <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Decorators.md"><code><b>Decorators</b></code></a>
 * <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Validation-and-Serialization.md"><code><b>Validação e Serialização</b></code></a>
