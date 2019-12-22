@@ -145,9 +145,9 @@ __Metodologia:__: `autocannon -c 100 -d 40 -p 10 localhost:3000` * 2, obtendo a 
 Benchmarks utilizando https://github.com/fastify/benchmarks. Este é um sintético, "hello world" benchmark que visa avalia a capacidade do framework. A capacidade que cada framework tem depende na sua aplicação, você deve __sempre__ avaliar se capacidade de resposta importa para você.
 
 ## Documentação
-* <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Getting-Started.md"><code><b>'Aquecendo'</b></code></a>
-* <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Server.md"><code><b>Server</b></code></a>
-* <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Routes.md"><code><b>Routes</b></code></a>
+* <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Getting-Started.md"><code><b>'Aquecendo'</b></code></a>&#10003;
+* <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Server.md"><code><b>Server</b></code></a>&#10003;
+* <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Routes.md"><code><b>Routes</b></code></a>&#10003;
 * <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Logging.md"><code><b>Logging</b></code></a>
 * <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Middleware.md"><code><b>Middleware</b></code></a>
 * <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Hooks.md"><code><b>Hooks</b></code></a>
@@ -162,7 +162,7 @@ Benchmarks utilizando https://github.com/fastify/benchmarks. Este é um sintéti
 * <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Plugins.md"><code><b>Plugins</b></code></a>
 * <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Testing.md"><code><b>Testando</b></code></a>
 * <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Benchmarking.md"><code><b>Benchmarking</b></code></a>
-* <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Write-Plugin.md"><code><b>Como escrever um bom plugin</b></code></a>
+* <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Write-Plugin.md"><code><b>Como escrever um bom plugin</b></code></a>&#10003;
 * <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Plugins-Guide.md"><code><b>Guia de Plugins</b></code></a>
 * <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/HTTP2.md"><code><b>HTTP2</b></code></a>
 * <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/LTS.md"><code><b>LTS - Suporte de longo prazo</b></code></a>
