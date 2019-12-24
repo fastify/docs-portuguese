@@ -14,7 +14,7 @@ Internamente, o Fastify compila o esquema em uma função de alto desempenho.
 
 <a name="validation"></a>
 ### Validação
-A validação de rota depende internamente do [Ajv] (https://www.npmjs.com/package/ajv), que é um validador de esquema JSON de alto desempenho. A validação da entrada é muito fácil: basta adicionar os campos que você precisa dentro do esquema de rota e pronto! As validações suportadas são:
+A validação de rota depende internamente do [Ajv](https://www.npmjs.com/package/ajv), que é um validador de esquema JSON de alto desempenho. A validação da entrada é muito fácil: basta adicionar os campos que você precisa dentro do esquema de rota e pronto! As validações suportadas são:
 - `body`: valida o corpo da solicitação se for um POST ou PUT.
 - `querystring` ou` query`: valida a string de consulta. Pode ser um objeto JSON Schema completo (com uma propriedade `type` de `'object'` e um objeto `'properties'` contendo parâmetros) ou uma variação mais simples na qual os atributos` type` e `properties` são perdidos e os parâmetros da consulta estão listados no nível superior (veja o exemplo abaixo).
 - `params`: valida os parâmetros da rota.
@@ -159,8 +159,8 @@ fastify.route({
 fastify.register((instance, opts, done) => {
 
   /**
-   * In children's scope can use schemas defined in upper scope like 'greetings'.
-   * Parent scope can't use the children schemas.
+   * No escopo filho, pode-se usar esquemas definidos no escopo pai, como 'greetings'.
+   * O escopo pai não pode usar os esquemas filhos.
    */
   instance.addSchema({
     $id: 'framework',
@@ -233,8 +233,8 @@ fastify.register((instance, opts, done) => {
 })
 ```
 Esse exemplo vai retornar:
-|  URL  | Schemas |
-|-------|---------|
+| URL   | Esquemas        |
+|-------|-----------------|
 | /     | one             |
 | /sub  | one, two        |
 | /deep | one, two, three |
@@ -332,13 +332,13 @@ Se você deseja alterar ou definir opções de configuração adicionais, será 
 const fastify = require('fastify')()
 const Ajv = require('ajv')
 const ajv = new Ajv({
-  // the fastify defaults (if needed)
+  // o padrão do fastify (se necessário)
   removeAdditional: true,
   useDefaults: true,
   coerceTypes: true,
   allErrors: true,
   nullable: true,
-  // any other options
+  // qualquer outra opção
   // ...
 })
 fastify.setSchemaCompiler(function (schema) {
@@ -365,11 +365,11 @@ Os exemplos abaixo são, portanto, equivalentes:
 ```js
 const joi = require('joi')
 
-// Validation options to match ajv's baseline options used in Fastify
+// Opções de validação para corresponder às opções da base do ajv usadas no Fastify
 const joiOptions = {
-  abortEarly: false, // return all errors
-  convert: true, // change data type of data to match type keyword
-  allowUnknown : false, // remove additional properties
+  abortEarly: false, // retorna todos erros
+  convert: true, // alterar o tipo de dados para corresponder ao tipo de palavra-chave
+  allowUnknown : false, // remove propriedades adicionais
   noDefaults: false
 }
 
@@ -381,7 +381,7 @@ const joiBodySchema = joi.object().keys({
 })
 
 const joiSchemaCompiler = schema => data => {
-  // joi `validate` function returns an object with an error property (if validation failed) and a value property (always present, coerced value if validation was successful)
+  // A função joi `validate` retorna um objeto com uma propriedade de erro (se a validação falhar) e uma propriedade de valor (sempre presente, valor coagido se a validação for bem-sucedida)
   const { error, value } = joiSchema.validate(data, joiOptions)
   if (error) {
     return { error }
@@ -404,11 +404,11 @@ fastify.post('/the/url', {
 ```js
 const yup = require('yup')
 
-// Validation options to match ajv's baseline options used in Fastify
+// Opções de validação para corresponder às opções base do ajv usadas no Fastify
 const yupOptions = {
   strict: false,
-  abortEarly: false, // return all errors
-  stripUnknown: true, // remove additional properties
+  abortEarly: false, // retorna todos erros
+  stripUnknown: true, // remove propriedades adicionais
   recursive: true
 }
 
@@ -420,7 +420,7 @@ const yupBodySchema = yup.object({
 })
 
 const yupSchemaCompiler = schema => data => {
-  // with option strict = false, yup `validateSync` function returns the coerced value if validation was successful, or throws if validation failed
+  // com a opção strict = false, a função yup `validateSync` retorna o valor coagido se a validação foi bem-sucedida ou lança se a validação falhou
   try {
     const result = schema.validateSync(data, yupOptions)
     return { value: result }
@@ -460,19 +460,19 @@ const errorHandler = (error, request, reply) => {
 
   const { validation, validationContext } = error
 
-  // check if we have a validation error
+  // verifica se houve um erro de validação
   if (validation) {
     response = {
-      message: `A validation error occured when validating the ${validationContext}...`, // validationContext will be 'body' or 'params' or 'headers' or 'query'
-      errors: validation // this is the result of your validation library...
+      mensagem: `Ocorreu um erro de validação ao validar o ${validationContext}...`, // validationContext será 'body', 'params', 'headers' ou 'query'
+      errors: validation // este é o resultado da sua biblioteca de validação...
     }
   } else {
     response = {
-      message: 'An error occurred...'
+      message: 'Um erro ocorreu...'
     }
   }
 
-  // any additional work here, eg. log error
+  // qualquer trabalho adicional aqui, por exemplo: log de erro
   // ...
 
   reply.status(statusCode).send(response)
@@ -618,7 +618,7 @@ const fastify = Fastify()
 
 fastify.post('/', { schema, attachValidation: true }, function (req, reply) {
   if (req.validationError) {
-    // `req.validationError.validation` contains the raw validation error
+    // `req.validationError.validation` contém o erro bruto de validação
     reply.code(400).send(req.validationError)
   }
 })
@@ -629,8 +629,8 @@ Você também pode usar [setErrorHandler](https://www.fastify.io/docs/latest/Ser
 ```js
 fastify.setErrorHandler(function (error, request, reply) {
   if (error.validation) {
-     // error.validationContext can be on of [body, params, querystring, headers]
-     reply.status(422).send(new Error(`validation failed of the ${error.validationContext}`))
+     // error.validationContext pode ser um de [body, params, querystring, headers]
+     reply.status(422).send(new Error(`Erro de validação: ${error.validationContext}`))
   }
 })
 ```
