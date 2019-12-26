@@ -120,7 +120,7 @@ O código-fonte do Fastify's **v1.x** está na [Branch 1.x](https://github.com/f
 
 ### Principais recursos
 
-- **Alto desempenho:** até onde sabemos, Fastify é um dos mais rápidos web frameworks 'na área', dependendo da complexidade do código, com o Fastify, você pode servir até 30 mil requisições por segundo.
+- **Alto desempenho:** até onde sabemos, Fastify é um dos mais rápidos web frameworks 'na área', dependendo da complexidade do código, com o Fastify, você pode servir mais de 76 mil requisições por segundo.
 - **Extensível:** Fastify é completamente extensível via hooks, plugins e decorators.
 - **Baseado em Schema:** mesmo não sendo obrigatório, recomendamos o uso de [JSON Schema](http://json-schema.org/) para validar suas rotas e serializar seus retornos, internamente o Fastify compila o schema em funções de alto desempenho.
 - **Logging:** logs são extremamente importantes mas são dispendiosos; escolhemos o melhor logger para quase remover esse 'custo', [Pino](https://github.com/pinojs/pino)!
@@ -174,7 +174,7 @@ Documentation [English](https://github.com/fastify/fastify/blob/master/README.md
 
 ## Ecossistema
 - [Core](https://github.com/fastify/docs-portuguese/blob/master/docs/Ecosystem.md#core) - Plugins mantidos pela [equipe](#equipe) _Fastify_ [team](#team).
-- [Comunidade](https://github.com/fastify/docs-portuguese/blob/master/docs/Ecosystem.md#comunidade) - Community supported plugins.
+- [Comunidade](https://github.com/fastify/docs-portuguese/blob/master/docs/Ecosystem.md#comunidade) - Plugins mantidos pela Comunidade.
 - [Exemplos (English)](https://github.com/fastify/example) - Multirepo com um conjunto de exemplos funcionais reais.
 
 ## Suporte
@@ -208,7 +208,7 @@ Os membros da equipe é listado em ordem alfabética.
 * [__Manuel Spigolon__](https://github.com/eomm), <https://twitter.com/manueomm>, <https://www.npmjs.com/~eomm>
 
 ### Colaboradores
-Great contributors on a specific area in the Fastify ecosystem will be invited to join this group by Lead Maintainers.
+Grandes colaboradores em áreas específicas no ecossistema Fastify seráo convidados a se juntar a este grupo pelos Líderes Mantenedores.
 
 * [__Luciano Mammino__](https://github.com/lmammino), <https://twitter.com/loige>, <https://www.npmjs.com/~lmammino>
 * [__Evan Shortiss__](https://github.com/evanshortiss), <https://twitter.com/evanshortiss>, <https://www.npmjs.com/~evanshortiss>
