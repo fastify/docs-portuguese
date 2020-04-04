@@ -1,0 +1,137 @@
+<h1 align="center">Fastify</h1>
+
+## Ecossistema
+
+Os plug-ins mantidos pela equipe de fastify estão listados em [Core](#core), enquanto os plug-ins mantidos pela comunidade estão listados na seção [Community](#community).
+
+#### [Core](#core)
+
+- [`fastify-accept`](https://github.com/fastify/fastify-accepts) para ter [accepts](https://www.npmjs.com/package/accepts) em seu objeto request.
+- [`fastify-accept-serializer`]https://github.com/fastify/fastify-accepts-serializer) para serializar a saída de acordo com o cabeçalho `Accept`.
+- [`fastify-auth`](https://github.com/fastify/fastify-auth) Execute várias funções de autenticação no Fastify.
+- [`fastify-bankai`](https://github.com/fastify/fastify-bankai) [Bankai](https://github.com/yoshuawuyts/bankai) compilador de assets do Fastify.
+- [`fastify-basic-auth`](https://github.com/fastify/fastify-basic-auth) Plug-in de autenticação básico para o Fastify.
+- [`fastify-bearer-auth`](https://github.com/fastify/fastify-bearer-auth) Plug-in de autenticação bearer do Fastify.
+- [`fastify-caching`](https://github.com/fastify/fastify-caching) Suporte geral ao cache e ao etag do lado do servidor.
+- [`fastify-circuit-breaker`](https://github.com/fastify/fastify-circuit-breaker) Um disjuntor de sobrecarga baixa para suas rotas.
+- [`fastify-compress`](https://github.com/fastify/fastify-compress) Fastify utilitários de compactação.
+- [`fastify-cookie`](https://github.com/fastify/fastify-cookie) Analise e defina os cabeçalhos dos cookies.
+- [`fastify-cors`](https://github.com/fastify/fastify-cors) Permite o uso do CORS em um aplicativo Fastify.
+- [`fastify-env`](https://github.com/fastify/fastify-env) Carregue e verifique a configuração.
+- [`fastify-elasticsearch`](https://github.com/fastify/fastify-elasticsearch) Plug-in para compartilhar o mesmo cliente ES.
+- [`fastify-flash`](https://github.com/fastify/fastify-flash) Defina e receba mensagens flash usando a sessão.
+- [`fastify-formbody`](https://github.com/fastify/fastify-formbody) Plug-in para analisar os corpos x-www-form-urlencoded.
+- [`fastify-helmet`](https://github.com/fastify/fastify-helmet) Cabeçalhos de segurança importantes para o Fastify.
+- [`fastify-http-proxy`](https://github.com/fastify/fastify-http-proxy) Proxy suas solicitações HTTP para outro servidor, com ganchos.
+- [`fastify-jwt`](https://github.com/fastify/fastify-jwt) Os utilitários JWT para Fastify, usam internamente o [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken).
+- [`fastify-leveldb`](https://github.com/fastify/fastify-leveldb) Plug-in para compartilhar uma conexão comum do LevelDB através do Fastify.
+- [`fastify-mongodb`](https://github.com/fastify/fastify-mongodb) Fastify o plug-in de conexão MongoDB, com o qual você pode compartilhar o mesmo conjunto de conexões MongoDB em todas as partes do servidor.
+- [`fastify-multipart`](https://github.com/fastify/fastify-multipart) Suporte de várias partes para o Fastify.
+- [`fastify-oauth2`](https://github.com/fastify/fastify-oauth2) Passe por [`simple-oauth2`](https://github.com/lelylan/simple-oauth2).
+- [`fastify-objectionjs`](https://github.com/jarcodallo/fastify-objectionjs) Plug-in para a estrutura `fastify` que fornece integração com o objectionjs ORM.
+- [`fastify-postgres`](https://github.com/fastify/fastify-postgres) Fastify o plug-in de conexão PostgreSQL, com isso você pode compartilhar o mesmo pool de conexões do PostgreSQL em todas as partes do servidor.
+- [`fastify-rate-limit`](https://github.com/fastify/fastify-rate-limit) Um limitador de taxa aérea baixo para suas rotas.
+- [`fastify-response-validation`](https://github.com/fastify/fastify-response-validation) Um plug-in simples que permite a validação de resposta do Fastify.
+- [`fastify-nextjs`](https://github.com/fastify/fastify-nextjs) Reaja ao suporte de renderização do lado do servidor para Fastify com o [Next](https://github.com/zeit/next.js/) .
+- [`fastify-redis`](https://github.com/fastify/fastify-redis) Fastify Redis plugin de conexão, com o qual você pode compartilhar a mesma conexão Redis em todas as partes do seu servidor.
+- [`fastify-reply-from`](https://github.com/fastify/fastify-reply-from) Plug-in para encaminhar a solicitação HTTP atual para outro servidor.
+- [`fastify-routes`](https://github.com/fastify/fastify-routes) Plug-in que fornece um `Mapa` de rotas.
+- [`fastify-sensible`](https://github.com/fastify/fastify-sensible) Padrões para o Fastify com os quais todos concordam. Ele adiciona alguns decoradores úteis, como erros e asserções http, mas também mais métodos de solicitação e resposta.
+- [`fastify-static`](https://github.com/fastify/fastify-static) Plug-in para servir arquivos estáticos o mais rápido possível.
+- [`fastify-swagger`](https://github.com/fastify/fastify-swagger) Gerador de documentação do Swagger para Fastify.
+- [`fastify-websocket`](https://github.com/fastify/fastify-websocket) Suporte do WebSocket para Fastify. Criado em [websocket-stream](https://github.com/maxogden/websocket-stream).
+- [`fastify-url-data`](https://github.com/fastify/fastify-url-data) Decore o objeto `Request` com um método para acessar os componentes brutos da URL.
+- [`point-of-view`](https://github.com/fastify/point-of-view) Suporte de plug-in de renderização de modelos (_ejs, pug, guidão, marko_) para o Fastify.
+- [`under-pressure`](https://github.com/fastify/under-pressure) Meça a carga do processo com o manuseio automático do plugin _"Service Unavailable"_ para o Fastify.
+ 
+#### [Community](#community)
+
+- [`apollo-server-fastify`](https://github.com/apollographql/apollo-server/tree/master/packages/apollo-server-fastify) Execute um [Apollo Server](https://github.com/apollographql/apollo-server) para servir o GraphQL com o Fastify.
+- [`arecibo`](https://github.com/nucleode/arecibo) Fastify o respondedor de ping para as probabilidades de vida e prontidão do Kubernetes.
+- [`cls-rtracer`](https://github.com/puzpuzpuz/cls-rtracer) Fastify o middleware para geração de ID de solicitação baseado em CLS. Uma solução pronta para o uso para adicionar IDs de solicitação aos seus logs.
+- [`fastify-405`](https://github.com/Eomm/fastify-405) Plugin Fastify que adiciona 405 status HTTP às suas rotas.
+- [`fastify-amqp`](https://github.com/RafaelGSS/fastify-amqp) Fastify o plug-in de conexão AMQP, para usar com o RabbitMQ ou outro conector. Apenas um wrapper para [`amqplib`](https://github.com/squaremo/amqp.node).
+- [`fastify-angular-universal`](https://github.com/exequiel09/fastify-angular-universal) Suporte de renderização angular no lado do servidor usando [`@angular/platform-server`](https://github.com/angular/angular/tree/master/packages/platform-server) para Fastify
+- [`fastify-auth0-verifica`](https://github.com/nearform/fastify-auth0-verify): plug-in de verificação Auth0 para Fastify, usa internamente [fastify-jwt](https://npm.im/fastify-jwt) e [jsonwebtoken](https://npm.im/jsonwebtoken).
+- [`fastify-autocrud`](https://github.com/paranoiasystem/fastify-autocrud) Plug-in para gerar automaticamente rotas CRUD o mais rápido possível.
+- [`fastify-axios`](https://github.com/davidedantonio/fastify-axios) Plug-in para enviar solicitações HTTP via [axios](https://github.com/axios/axios).
+- [`fastify-babel`](https://github.com/cfware/fastify-babel) Fastify plugin para servidores de desenvolvimento que requerem transformações de fontes babel em JavaScript.
+- [`fastify-blipp`](https://github.com/PavelPolyakov/fastify-blipp) Imprime suas rotas no console, para que você saiba definitivamente quais pontos de extremidade estão disponíveis.
+- [`fastify-bookshelf`](https://github.com/butlerx/fastify-bookshelfjs) Plug-in para adicionar o suporte [bookshelf.js](http://bookshelfjs.org/) ou orm.
+- [`fastify-boom`](https://github.com/jeromemacias/fastify-boom) Fastify plugin para adicionar suporte ao [boom](https://github.com/hapijs/boom).
+- [`fastify-casl`](https://github.com/Inlecom/fastify-casl) Fastify [CASL](https://github.com/stalniy/casl) plug-in que suporta proteção semelhante a ACL de endpoints via um gancho preSerialization e preHandler, limpando as entradas e saídas do seu aplicativo com base nos direitos do usuário.
+- [`fastify-cloudevents`](https://github.com/smartiniOnGitHub/fastify-cloudevents) Fastify plugin para gerar e encaminhar eventos Fastify no formato Cloudevents.
+- [`fastify-cockroachdb`](https://github.com/alex-ppg/fastify-cockroachdb) Fastify plugin para conectar-se a uma instância do CockroachDB PostgreSQL através do Sequelize ORM.
+- [`fastify-couchdb`](https://github.com/nigelhanlon/fastify-couchdb) Fastify plugin para adicionar suporte ao CouchDB via [nano](https://github.com/apache/nano).
+- [`fastify-csrf`](https://github.com/Tarang11/fastify-csrf) Um plug-in csrf para o Fastify.
+- [`fastify-datastore`](https://github.com/now-ims/now-fastify-datastore) Fastify plugin para o [Google Cloud Datastore](https://cloud.google.com/nodejs/docs/reference/datastore/1.4.x/).
+- [`fastify-decorators`](https://github.com/L2jLiga/fastify-decorators) Plugin Fastify que fornece o conjunto de decoradores TypeScript.
+- [`fastify-dynamodb`](https://github.com/matrus2/fastify-dynamodb) Plug-in do AWS DynamoDB para Fastify. Ele expõe o objeto [AWS.DynamoDB.DocumentClient()](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB/DocumentClient.html).
+- [`fastify-error-page`](https://github.com/hemerajs/fastify-error-page) Plug-in para imprimir erros no HTML estruturado no navegador.
+- [`fastify-errors-properties`](https://github.com/ShogunPanda/fastify-errors-properties) Um plug-in de manipulação de erros do Fastify que permite propriedades adicionais em erros.
+- [`fastify-explorer`](https://github.com/Eomm/fastify-explorer) Controle seus decoradores em todos os contextos encapsulados
+- [`fastify-esso`](https://github.com/patrickpissurno/fastify-esso) O plug-in de autenticação mais fácil para o Fastify, com suporte embutido para logon único(e excelente documentação)
+- [`fastify-favicon`](https://github.com/smartiniOnGitHub/fastify-favicon) Fastify plug-in para exibir o favicon padrão.
+- [`fastify-feature-flags`](https://gitlab.com/m03geek/fastify-feature-flags) Fastify plugin de sinalizadores de recursos com suporte a vários provedores (por exemplo, env, [config](http://lorenwest.github.io/node-config/), [desencadear](https://unleash.github.io/)).
+- [`fastify-file-upload`](https://github.com/huangang/fastify-file-upload) Fastify plugin para upload de arquivos.
+- [`fastify-firebase-auth`](https://github.com/oxsav/fastify-firebase-auth) Autenticação do Firebase para Fastify, suportando todos os métodos relacionados à API de autenticação.
+- [`fastify-firestore`](https://github.com/now-ims/fastify-firestore) Plugin de Fastify para o [Google Cloud Firestore](https://cloud.google.com/nodejs/docs/reference/firestore/0.13.x/).
+- [`fastify-google-cloud-storage`](https://github.com/carlozamagni/fastify-google-cloud-storage) Plug-in Fastify que expõe uma instância do cliente do GCP Cloud Storage.
+- [`fastify-gql`](https://github.com/mcollina/fastify-gql) Uma implementação de servidor GraphQL para Fastify com armazenamento em cache e [`graphql-jit`](https://github.com/ruiaraujo/graphql-jit).
+- [`fastify-graceful-shutdown`](https://github.com/hemerajs/fastify-graceful-shutdown) Shutdown Fastify de forma graciosa e assíncrona.
+- [`fastify-healthcheck`](https://github.com/smartiniOnGitHub/fastify-healthcheck) Fastify plugin para servir uma rota de verificação de saúde e um script de análise.
+- [`fastify-hemera`](https://github.com/hemerajs/fastify-hemera) Plugin Fastify Hemera, para gravar microsserviços confiáveis e tolerantes a falhas com [nats.io](https://nats.io/ )
+- [`fastify-http2https`](https://github.com/lolo32/fastify-http2https) Redirecione solicitações HTTP para HTTPS, ambas usando o mesmo número de porta ou resposta diferente em HTTP e HTTPS.
+- [`fastify-https-redirect`](https://github.com/tomsvogel/fastify-https-redirect) Fastify plugin para redirecionamento automático de http para https.
+- [`fastify-http-client`](https://github.com/kenuyx/fastify-http-client) Plug-in para enviar solicitações HTTP (s). Criado em [urllib](https://github.com/node-modules/urllib).
+- [`fastify-influxdb`](https://github.com/alex-ppg/fastify-influxdb) Fastify o plug-in do InfluxDB conectando-se a uma instância do InfluxDB por meio do pacote padrão do Influx.
+- [`fastify-jwt-authz`](https://github.com/Ethan-Arrowood/fastify-jwt-authz) Verificador de escopo do usuário JWT.
+- [`fastify-jwt-webapp`](https://github.com/charlesread/fastify-jwt-webapp) Autenticação JWT para aplicativos Web baseados em fastify.
+- [`fastify-knexjs`](https://github.com/chapuletta/fastify-knexjs) Fastify plugin para suporte ao KnexJS Query Builder.
+- [`fastify-knexjs-mock`](https://github.com/chapuletta/fastify-knexjs-mock) Fastify Mock KnexJS para suporte de teste.
+- [`fastify-kubernetes`](https://github.com/greguz/fastify-kubernetes) Fastify o plug-in do cliente Kubernetes.
+- [`fastify-language-parser`](https://github.com/lependu/fastify-language-parser) Fastify plugin para analisar o idioma da solicitação.
+- [`fastify-loader`](https://github.com/TheNoim/fastify-loader) Carrega rotas de um diretório e injeta a instância de fastify em cada arquivo.
+- [`fastify-lured`](https://github.com/lependu/fastify-lured) Plug-in para carregar scripts lua com [fastify-redis](https://github.com/fastify/fastify-redis) e [seduzido](https://github.com/enobufs/lured).
+- [`fastify-markdown`](https://github.com/freezestudio/fastify-markdown) Plug-in para suporte de markdown.
+- [`fastify-method-override`](https://github.com/corsicanec82/fastify-method-override) Plug-in para Fastify, que permite o uso de verbos HTTP, como DELETE, PATCH, HEAD, PUT, OPTIONS no caso o cliente não os suporta.
+- [`fastify-metrics`](https://gitlab.com/m03geek/fastify-metrics) Plug-in para exportar métricas [Prometheus](https://prometheus.io).
+- [`fastify-mongo-memory`](https://github.com/chapuletta/fastify-mongo-memory) Fastify MongoDB no plug-in de memória para suporte de teste.
+- [`fastify-mongoose-api`](https://github.com/jeka-kiselyov/fastify-mongoose-api) Fastify plugin para criar métodos da API REST baseados nos modelos Mongoose MongoDB.
+- [`fastify-mongoose-driver`](https://github.com/alex-ppg/fastify-mongoose) Fastify o plug-in do Mongoose que se conecta a um MongoDB por meio do plug-in do Mongoose com suporte para modelos.
+- [`fastify-multer`](https://github.com/fox1t/fastify-multer) O Multer é um plug-in para lidar com dados de várias partes / formulário, usado principalmente para o upload de arquivos.
+- [`fastify-nats`](https://github.com/mahmed8003/fastify-nats) Plug-in para compartilhar o cliente [NATS](http://nats.io) no Fastify.
+- [`fastify-no-additional-properties`](https://github.com/greguz/fastify-no-additional-properties) Adicione `additionalProperties: false` por padrão aos seus esquemas JSON.
+- [`fastify-no-icon`](https://github.com/jsumners/fastify-no-icon) Plug-in para eliminar erros gerados para solicitações do `/favicon.ico`.
+- [`fastify-nodemailer`](https://github.com/lependu/fastify-nodemailer) Plug-in para compartilhar o transportador [nodemailer](http://nodemailer.com) no Fastify.
+- [`fastify-normalize-request-reply`](https://github.com/ericrglass/fastify-normalize-request-reply) Plug-in para normalizar a solicitação e responder à solicitação e resposta do Express versão 4.x, que permite o uso de middleware, como o swagger-stats, originalmente escrito para o Express.
+- [`fastify-oas`](https://gitlab.com/m03geek/fastify-oas) Gera documentação do OpenAPI 3.0+ a partir dos esquemas de rotas do Fastify.
+- [`fastify-openapi-glue`](https://github.com/seriousme/fastify-openapi-glue) Cole as especificações da Open Api no Fastify, gera automaticamente rotas com base em uma Open Api Specification
+- [`fastify-oracle`](https://github.com/cemremengu/fastify-oracle) Anexa um pool de conexão [`oracledb`](https://github.com/oracle/node-oracledb) a um Fastify instância do servidor.
+- [`fastify-orientdb`](https://github.com/mahmed8003/fastify-orientdb) Fastify o plug-in de conexão OrientDB, com o qual você pode compartilhar a conexão OrientDB em todas as partes do servidor.
+- [`fastify-qrcode`](https://github.com/chonla/fastify-qrcode) Este plugin utiliza [qrcode](https://github.com/soldair/node-qrcode) para gerar o QR Code.
+- [`fastify-qs`](https://github.com/webdevium/fastify-qs) Um plug-in do Fastify que adiciona suporte para analisar parâmetros de consulta de URL com [qs](https://github.com/ljharb/qs).
+- [`fastify-rbac`](https://gitlab.com/m03geek/fastify-rbac) Fastify plug-in de controle de acesso baseado em função.
+- [`fastify-register-routes`](https://github.com/israeleriston/fastify-register-routes) Plug-in para carregar automaticamente rotas a partir de um caminho especificado e, opcionalmente, limitar nomes de arquivos carregados por uma expressão regular.
+- [`fastify-response-time`](https://github.com/lolo32/fastify-response-time) Adicione o cabeçalho `X-Response-Time` em cada solicitação de Fastify, em milissegundos.
+- [`fastify-reverse-routes`](https://github.com/dimonnwc3/fastify-reverse-routes) O plugin Fastify reverse routes, permite definir rotas nomeadas e construir caminhos usando nome e parâmetros.
+- [`fastify-rob-config`](https://github.com/jeromemacias/fastify-rob-config) Fastify a integração do Rob-Config.
+- [`fastify-schema-constraint`](https://github.com/Eomm/fastify-schema-constraint) Escolha o esquema JSON a ser usado com base nos parâmetros de solicitação.
+- [`fastify-secure-session`](https://github.com/mcollina/fastify-secure-session) Crie uma sessão segura de cookies sem estado para o Fastify
+- [`fastify-sentry`](https://github.com/alex-ppg/fastify-sentry) Fastify plugin para adicionar o manipulador de erros do Sentry SDK às solicitações.
+- [`fastify-sequelize`](https://github.com/lyquocnam/fastify-sequelize) Aperfeiçoe o trabalho do plug-in com Sequelize (adaptador para NodeJS -> Sqlite, Mysql, Mssql, Postgres).
+- [`fastify-server-session`](https://github.com/jsumners/fastify-server-session) Um plug-in de sessão com suporte para caches de backup arbitrários via `fastify-caching`.
+- [`fastify-session`](https://github.com/SerayaEryn/fastify-session) um plug-in de sessão para o Fastify.
+- [`fastify-soap-client`](https://github.com/fastify/fastify-soap-client) um plug-in de cliente SOAP para o Fastify.
+- [`fastify-sse`](https://github.com/lolo32/fastify-sse) para fornecer eventos enviados pelo servidor com `reply.sse (…)` para Fastify.
+- [`fastify-tls-keygen`](https://gitlab.com/sebdeckers/fastify-tls-keygen) Gere automaticamente um certificado TLS compatível com navegador, confiável, autoassinado e somente com host local.
+- [`fastify-twitch-ebs-tools`](https://github.com/lukemnet/fastify-twitch-ebs-tools) Funções úteis para o Twitch Extension Backend Services (EBS).
+- [`fastify-typeorm-plugin`](https://github.com/inthepocket/fastify-typeorm-plugin) Fastify o plug-in para trabalhar com TypeORM.
+- [`fastify-vhost`](https://github.com/patrickpissurno/fastify-vhost) solicitações http de subdomínio proxy para outro servidor (útil se você deseja apontar vários subdomínios para o mesmo endereço IP, enquanto executa servidores diferentes em mesma máquina).
+- [`fastify-xml-body-parser`](https://github.com/NaturalIntelligence/fastify-xml-body-parser) Analisar a carga XML/corpo da solicitação no objeto JS/JSON.
+- [`fastify-vue-plugin`](https://github.com/TheNoim/fastify-vue) [Nuxt.js](https://nuxtjs.org) plugin para fastify. Controlar as rotas que o nuxt deve usar.
+- [`fastify-wamp-router`](https://github.com/lependu/fastify-wamp-router) Roteador do protocolo de mensagens de aplicativos da Web para fastify.
+- [`fast-water`](https://github.com/tswayne/fast-water) Um plugin de fastify para linha de água. Decora fastify com modelos de linha de água.
+- [`fastify-webpack-hmr`](https://github.com/lependu/fastify-webpack-hmr) Plug-in de recarga de módulo quente do Webpack para Fastify.
+- [`fastify-ws`](https://github.com/gj/fastify-ws) Integração do WebSocket para Fastify - com suporte para ganchos do ciclo de vida do WebSocket em vez de uma única função de manipulador. Criada em [ws](https://github.com/websockets/ws) e em [uws](https://github.com/uNetworking/bindings/tree/master/nodejs).
+- [`k-fastify-gateway`](https://github.com/jkyberneees/fastify-gateway) Plug-in API Gateway para `fastify`, uma implementação de baixa pegada que usa a biblioteca de proxy HTTP `fastify-reply-from`.
