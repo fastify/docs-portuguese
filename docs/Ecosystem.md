@@ -76,6 +76,7 @@ Os plug-ins mantidos pela equipe de fastify estão listados em [Core](#core), en
 - [`fastify-file-upload`](https://github.com/huangang/fastify-file-upload) Fastify plugin para upload de arquivos.
 - [`fastify-firebase-auth`](https://github.com/oxsav/fastify-firebase-auth) Autenticação do Firebase para Fastify, suportando todos os métodos relacionados à API de autenticação.
 - [`fastify-firestore`](https://github.com/now-ims/fastify-firestore) Plugin de Fastify para o [Google Cloud Firestore](https://cloud.google.com/nodejs/docs/reference/firestore/0.13.x/).
+- [`fastify-gcloud-trace`](https://github.com/mkinoshi/fastify-gcloud-trace) [Google Cloud Trace API](https://cloud.google.com/trace/docs/reference) Conector para Fastify.
 - [`fastify-google-cloud-storage`](https://github.com/carlozamagni/fastify-google-cloud-storage) Plug-in Fastify que expõe uma instância do cliente do GCP Cloud Storage.
 - [`fastify-gql`](https://github.com/mcollina/fastify-gql) Uma implementação de servidor GraphQL para Fastify com armazenamento em cache e [`graphql-jit`](https://github.com/ruiaraujo/graphql-jit).
 - [`fastify-graceful-shutdown`](https://github.com/hemerajs/fastify-graceful-shutdown) Shutdown Fastify de forma graciosa e assíncrona.
