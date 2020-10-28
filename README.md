@@ -166,7 +166,7 @@ Benchmarks utilizando https://github.com/fastify/benchmarks. Este é um sintéti
 * <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Plugins-Guide.md"><code><b>Guia de Plugins</b></code></a>
 * <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/HTTP2.md"><code><b>HTTP2</b></code></a>
 * <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/LTS.md"><code><b>LTS - Suporte de longo prazo</b></code></a>
-* <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/TypeScript.md"><code><b>TypeScript e suporte a tipagem</b></code></a>
+* <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Typescript.md"><code><b>TypeScript e suporte a tipagem</b></code></a>
 * <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Serverless.md"><code><b>Sem servidor</b></code></a>
 
 Documentation [English](https://github.com/fastify/fastify/blob/master/README.md)  
