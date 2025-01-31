@@ -25,10 +25,10 @@ Ao utilizar hooks você pode interagir diratamente com o ciclo de vida do Fastif
 
 ## Hooks de Request/Reply
 
-[Request](https://github.com/fastify/docs-portuguese/blob/master/docs/Request.md) e [Reply](https://github.com/fastify/docs-portuguese/blob/master/docs/Reply.md) são objetos internos do Fastify.<br/>
-`done` é uma função para continuar o [Ciclo de vida](https://github.com/fastify/docs-portuguese/blob/master/docs/Lifecycle.md).
+[Request](https://github.com/fastify/docs-portuguese/blob/main/docs/Request.md) e [Reply](https://github.com/fastify/docs-portuguese/blob/main/docs/Reply.md) são objetos internos do Fastify.<br/>
+`done` é uma função para continuar o [Ciclo de vida](https://github.com/fastify/docs-portuguese/blob/main/docs/Lifecycle.md).
 
-É super fácil entender quando cada hook é executado olhando a [página Ciclo de vida](https://github.com/fastify/docs-portuguese/blob/master/docs/Lifecycle.md).<br>
+É super fácil entender quando cada hook é executado olhando a [página Ciclo de vida](https://github.com/fastify/docs-portuguese/blob/main/docs/Lifecycle.md).<br>
 Hooks são influênciados pelo encapsulamento do Fastify e assim podem ser aplicados em rotas específicas. Confira a seção [Scopes](#scope) para mais informações.
 
 Existem 8 diferentes Request/Reply hooks que podem ser utilizados *(em ordem de execução)*:
@@ -208,7 +208,7 @@ fastify.addHook('preHandler', (request, reply, done) => {
 })
 ```
 
-*O erro será tratado pelo [`Reply`](https://github.com/fastify/docs-portuguese/blob/master/docs/Reply.md#errors).*
+*O erro será tratado pelo [`Reply`](https://github.com/fastify/docs-portuguese/blob/main/docs/Reply.md#errors).*
 
 ### Respondendo a uma requisição a partir de um hook
 Se necessário, você poderá responder a uma requisição antes desta acionar o handler da rota, por exemplo quando implementar um hook de autenticação. Se foce estiver utilizando os hooks `onRequest` ou `preHandler` use `reply.send`; se estiver utilizando um middleware, use `res.end`.
@@ -244,7 +244,7 @@ Você pode utlizar hooks do cliclo de vida da aplicação também. É importante
 <a name="on-close"></a>
 
 ### onClose
-Disparado quando `fastify.close()` é invocado para parar o servidor. É útil quando [plugins](https://github.com/fastify/docs-portuguese/blob/master/docs/Plugins.md) precisam de um evento para 'desligar/finalizar', por exemplo para fechar uma conexão aberta com o banco de dados.<br>
+Disparado quando `fastify.close()` é invocado para parar o servidor. É útil quando [plugins](https://github.com/fastify/docs-portuguese/blob/main/docs/Plugins.md) precisam de um evento para 'desligar/finalizar', por exemplo para fechar uma conexão aberta com o banco de dados.<br>
 O primeiro argumento é a instância do Fastify, o segundo é o callback `done`.
 ```js
 fastify.addHook('onClose', (instance, done) => {
@@ -320,7 +320,7 @@ fastify.addHook('onRegister', (instance, opts) => {
 <a name="scope"></a>
 
 ### Escopo
-Exceto pelos [Hooks de Aplicação](#application-hooks), todos os hooks são encapsulados. Isso significa que você pode decidir quando seus hooks devem executar ao utilizar `register`  como explicado no [Guia de plugins](https://github.com/fastify/docs-portuguese/blob/master/docs/Plugins-Guide.md). Se você definir uma função, ela será vinculada ao contexto correto do Fastify e, a partir daí, você terá total acesso à API Fastify.
+Exceto pelos [Hooks de Aplicação](#application-hooks), todos os hooks são encapsulados. Isso significa que você pode decidir quando seus hooks devem executar ao utilizar `register`  como explicado no [Guia de plugins](https://github.com/fastify/docs-portuguese/blob/main/docs/Plugins-Guide.md). Se você definir uma função, ela será vinculada ao contexto correto do Fastify e, a partir daí, você terá total acesso à API Fastify.
 
 ```js
 fastify.addHook('onRequest', function (request, reply, done) {

@@ -5,7 +5,7 @@
 
 O Fastify fornece um mecanismo de middleware nativamente via a biblioteca [middie](https://github.com/fastify/middie), que é compatível com middleware do [Express](https://expressjs.com/) e do [Restify](http://restify.com/) middleware.
 
-*Para entender melhor quando um middleware é executado, confira a página [Ciclo de vida](https://github.com/fastify/docs-portuguese/blob/master/docs/Lifecycle.md) do Fastify.*
+*Para entender melhor quando um middleware é executado, confira a página [Ciclo de vida](https://github.com/fastify/docs-portuguese/blob/main/docs/Lifecycle.md) do Fastify.*
 
 O mecanismo de middleware do Fastify não suporta a sintaxe completa `middleware(err, req, res, next)`, pelo fato de que o tratamento de erros é feito dentro do Fastify.
 Além disso, métodos para incrementar versões de `req` e `res` adicionados pelo Express e pelo Restify não são suportados no mecanismo de middlewares do Fastify.
@@ -31,7 +31,7 @@ const helmet = require('fastify-helmet')
 fastify.register(helmet)
 ```
 
-E lembre-se que middleware podem ser encapsulados, isso significa que você pode decidir quando o middleware deve ser executado utilizando `register` como explicado no [Guia de plugins](https://github.com/fastify/docs-portuguese/blob/master/docs/Plugins-Guide.md).
+E lembre-se que middleware podem ser encapsulados, isso significa que você pode decidir quando o middleware deve ser executado utilizando `register` como explicado no [Guia de plugins](https://github.com/fastify/docs-portuguese/blob/main/docs/Plugins-Guide.md).
 
 O mecanismo de middlewares do Fastify middleware também não expõe o método `send` ou outros métodos específicos da instância de resposta [Reply]('./Reply.md' "Reply") do Fastify. Isso porque internamente o Fastify encapsula as instâncias `req` e `res` recebidas do Node utilizando respectivamente as instâncias [Request](./Request.md "Request") e [Reply](./Reply.md "Reply"), mas isso é feito depois da fase de middleware. Se você precisa de criar um middleware, você precisa utilizar as instâncias do Node `req` e `res`. Caso contrário utilize o hook `preHandler` que já conterá as instâncias [Request](./Request.md "Request") and [Reply](./Reply.md "Reply") do Fastify. Para mais informações, confira [Hooks](./Hooks.md "Hooks").
 

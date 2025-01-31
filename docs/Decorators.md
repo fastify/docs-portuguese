@@ -160,7 +160,7 @@ fastify.get('/', (req, reply) => {
 <a name="sync-async"></a>
 
 #### Sync and Async
-`decorate` é uma API *síncrona*. Se você necessita adicionar um decorator que tenha algum processamento *asíncrono*, o Fastify pode ser carregado antes que seu decorador esteja pronto. Para evitar esse problema você deve utilizar a API `register` combinada com o `fastify-plugin`. Para aprender mais sobre, confira também a documentação [Plugins](https://github.com/fastify/docs-portuguese/blob/master/docs/Plugins.md).
+`decorate` é uma API *síncrona*. Se você necessita adicionar um decorator que tenha algum processamento *asíncrono*, o Fastify pode ser carregado antes que seu decorador esteja pronto. Para evitar esse problema você deve utilizar a API `register` combinada com o `fastify-plugin`. Para aprender mais sobre, confira também a documentação [Plugins](https://github.com/fastify/docs-portuguese/blob/main/docs/Plugins.md).
 
 <a name="dependencies"></a>
 

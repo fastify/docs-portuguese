@@ -85,7 +85,7 @@ Fastify oferece uma plataforma simples que ajuda a resolver todos os problemas m
 ### Primeiro plugin
 Siminar ao fato de que em JavaScript tudo é um objeto, no Fastify tudo é um plugin.<br>
 Antes de aprofundarmos, vamos ver como funciona!<br>
-Vamos declarar nosso servidor básico, contudo, ao invés de declarar a rota dentro arquivo principal, iremos declará-lo em um arquivo separado (confira a documentação [declaração de rotas](https://github.com/fastify/docs-portuguese/blob/master/docs/Routes.md)).
+Vamos declarar nosso servidor básico, contudo, ao invés de declarar a rota dentro arquivo principal, iremos declará-lo em um arquivo separado (confira a documentação [declaração de rotas](https://github.com/fastify/docs-portuguese/blob/main/docs/Routes.md)).
 ```js
 const fastify = require('fastify')({
   logger: true
@@ -121,7 +121,7 @@ Uma solução típica é utilizar de funções 'callback' complexas ou 'promises
 O Fastify cuida disso internamente, sem o menor esforço!
 
 'Uai sô! Simbôra' escrever um exemplo com conexão a um banco de dados.<br>
-*(Nós iremos usar um exemplo simples. Para uma solução mais robusta considere utilizar [`fastify-mongo`](https://github.com/fastify/fastify-mongodb) ou outro do [ecossistema](https://github.com/fastify/docs-portuguese/blob/master/docs/Ecosystem.md) Fastify)*
+*(Nós iremos usar um exemplo simples. Para uma solução mais robusta considere utilizar [`fastify-mongo`](https://github.com/fastify/fastify-mongodb) ou outro do [ecossistema](https://github.com/fastify/docs-portuguese/blob/main/docs/Ecosystem.md) Fastify)*
 *(Para esse exemplo você precisa de ter instalada uma versão do MongoDB localmente)*
 
 Primeiro, instale o `fastify-plugin` e o `mongodb`:
@@ -193,12 +193,12 @@ module.exports = routes
 Uau, isso foi rápido!<br>
 'Está na hora da revisão' do que fizemos até aqui desde uma vez que apresentamos alguns conceitos novos.<br>
 Como pode ser visto, nós usamos `register` para ambas funcionalidades, conector de banco de dados e registro de rotas.
-Essa é uma das melhores características do Fastify, ele irá carregar seus plugins na mesma ordem que você declarar eles e irá carregar o próximo plugin *apenas* quando o atual acabar de ser carregado. Desta forma, nós podemos/devemos registrar nosso conector de banco de dados e podemos utilizar ele no segundo. *(leia [lidando com o escopo](https://github.com/fastify/docs-portuguese/blob/master/docs/Plugins.md#handle-the-scope) para entender como lidar com o escopo de um plugin)*.
+Essa é uma das melhores características do Fastify, ele irá carregar seus plugins na mesma ordem que você declarar eles e irá carregar o próximo plugin *apenas* quando o atual acabar de ser carregado. Desta forma, nós podemos/devemos registrar nosso conector de banco de dados e podemos utilizar ele no segundo. *(leia [lidando com o escopo](https://github.com/fastify/docs-portuguese/blob/main/docs/Plugins.md#handle-the-scope) para entender como lidar com o escopo de um plugin)*.
 O carregamento de plugin inicia no momento em que os métodos `fastify.listen()`, `fastify.inject()` ou `fastify.ready()` são invocados.
 
 Nós também usamos a API `decorate` para adicionar um objeto personalizado no namespace do Fastify, tornando-o disponível para o uso em todos dos lugares, subsequentes. O uso dessa API é encorajado para facilitar a fácil reutilização de código, evitando assim a quantidade de código ou a duplicação da lógica.
 
-Para investigar a fundo como os plugins funcionam no Fastify, como implementar novos plugins, detalhes como utilizar todo arsenal da API do Fastify para lidar com complexidades de fluxo assíncrono de uma aplicação, leia [O 'Guia do mochileiro' para plugins](https://github.com/fastify/docs-portuguese/blob/master/docs/Plugins-Guide.md).
+Para investigar a fundo como os plugins funcionam no Fastify, como implementar novos plugins, detalhes como utilizar todo arsenal da API do Fastify para lidar com complexidades de fluxo assíncrono de uma aplicação, leia [O 'Guia do mochileiro' para plugins](https://github.com/fastify/docs-portuguese/blob/main/docs/Plugins-Guide.md).
 
 <a name="plugin-loading-order"></a>
 ### Ordem de carregamento dos plugins
@@ -257,7 +257,7 @@ fastify.post('/', opts, async (request, reply) => {
 })
 ```
 Este exemplo mostra como passar um objeto de opções como parametro da rota, que aceita uma chave `schema`, que por sua vez contém todos os schemas para a rota: `body`, `querystring`, `params` and `headers`.<br>
-Leia [Validações e Serialização](https://github.com/fastify/docs-portuguese/blob/master/docs/Validation-and-Serialization.md) para aprender mais.
+Leia [Validações e Serialização](https://github.com/fastify/docs-portuguese/blob/main/docs/Validation-and-Serialization.md) para aprender mais.
 
 <a name="serialize-data"></a>
 ### Serialização de dados
@@ -282,17 +282,17 @@ fastify.get('/', opts, async (request, reply) => {
 })
 ```
 Pelo simples fato de especificar o schema como mostrado é possível acelerar a serialização 2-3x. Isso também ajuda a proteger contra vazamento de dados potenciamente sensíveis, uma vez que o Fastify irá serializar apenas os dados declarados na chave `response` do schema.
-Leia [Validação e Serialização](https://github.com/fastify/docs-portuguese/blob/master/docs/Validation-and-Serialization.md) para aprender mais.
+Leia [Validação e Serialização](https://github.com/fastify/docs-portuguese/blob/main/docs/Validation-and-Serialization.md) para aprender mais.
 
 <a name="extend-server"></a>
 ### Expandindo seu servidor
 Fastify é desenvolvido para ser extremamente expandível e mínimo, acreditamos que a 'espinha dorsal' de um framework é tudo o que é necessário para possibilitar a criação de aplicações maravilhosas.<br>
-Em outras palavras, o Fastify não é um framework com 'baterias inclusas', e conta com um extraordinário [ecossistema](https://github.com/fastify/docs-portuguese/blob/master/docs/Ecosystem.md)!
+Em outras palavras, o Fastify não é um framework com 'baterias inclusas', e conta com um extraordinário [ecossistema](https://github.com/fastify/docs-portuguese/blob/main/docs/Ecosystem.md)!
 
 <a name="test-server"></a>
 ### Testando seu servidor
 Fastify não oferece uma estrutura de teste, mas recomendamos uma forma de escrever seus testes que usa as funcionalidades e a arquitetura do Fastify.<br>
-Leia a documentação [testando](https://github.com/fastify/docs-portuguese/blob/master/docs/Testing.md) para aprender mais!
+Leia a documentação [testando](https://github.com/fastify/docs-portuguese/blob/main/docs/Testing.md) para aprender mais!
 
 <a name="cli"></a>
 ### 'Rodar' seu servidor utilizando a CLI

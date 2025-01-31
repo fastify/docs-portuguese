@@ -5,7 +5,7 @@
 (Factory é um 'design pattern' para geração de instâncias, em modelo de fábrica, daí o nome 'factory')
 
 O módulo Fastify exporta uma função factory que é usada para criar novas instâncias do 
-<a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Server.md"><code><b>servidor Fastify</b></code></a>. 
+<a href="https://github.com/fastify/docs-portuguese/blob/main/docs/Server.md"><code><b>servidor Fastify</b></code></a>. 
 Essa função factory aceita um objeto como parâmetro que é usado para customizar a instância resultante. 
 Este documento descreve as propriedades disponíveis nesse objeto JSON.
 
@@ -24,7 +24,7 @@ As opções são as mesmas do método [`createServer`](https://nodejs.org/dist/l
 Quando o valor desta propriedade é `null`, o socket não será configurado para utilizar TLS.
 
 Esta opção também se aplica quando a propriedade 
-<a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Server.md#factory-http2">
+<a href="https://github.com/fastify/docs-portuguese/blob/main/docs/Server.md#factory-http2">
 <code><b>http2</b></code>
 </a> estiver configurada.
 
@@ -180,7 +180,7 @@ fastify.listen(3000)
 ```
 
 Internamente o Fastify usa a API server nativa do Node, então se você estiver usando um servidor customizado tenha certeza que tenha a mesma API exposta. Se não você pode incrementar a instância do servidor dentro da função `serveFactory` antes da declaração `return`.<br/>
-*Note que nós também adicionamos `modifyCoreObjects: false` porque em alguns ambientes [serverless](https://github.com/fastify/docs-portuguese/blob/master/docs/Serverless.md), como Google Cloud Functions, algumas propriedades não são modificáveis.*
+*Note que nós também adicionamos `modifyCoreObjects: false` porque em alguns ambientes [serverless](https://github.com/fastify/docs-portuguese/blob/main/docs/Serverless.md), como Google Cloud Functions, algumas propriedades não são modificáveis.*
 
 <a name="factory-case-sensitive"></a>
 ### `caseSensitive`
@@ -201,7 +201,7 @@ Note, por favor, que ao configurar essa opção para `false` vai contra a [RFC39
 <a name="factory-request-id-header"></a>
 ### `requestIdHeader`
 
-O cabeçalho utilizado para identificar o id da requisição. Veja a seção [id da requisição](https://github.com/fastify/docs-portuguese/blob/master/docs/Logging.md#logging-request-id).
+O cabeçalho utilizado para identificar o id da requisição. Veja a seção [id da requisição](https://github.com/fastify/docs-portuguese/blob/main/docs/Logging.md#logging-request-id).
 
 + Valor padrão: `'request-id'`
 
@@ -253,7 +253,7 @@ const fastify = Fastify({ trustProxy: true })
 
 Para mais exemplos consulte o pacote [proxy-addr](https://www.npmjs.com/package/proxy-addr).
 
-Você pode conferir os valores `ip`, `ips`, e `hostname` no objeto [`request`](https://github.com/fastify/docs-portuguese/blob/master/docs/Request.md).
+Você pode conferir os valores `ip`, `ips`, e `hostname` no objeto [`request`](https://github.com/fastify/docs-portuguese/blob/main/docs/Request.md).
 
 ```js
 fastify.get('/', (request, reply) => {
@@ -267,7 +267,7 @@ fastify.get('/', (request, reply) => {
 ### `pluginTimeout`
 
 A quantidade máxima de tempo em *milesegundos* que um plugin tem para ser carregado.
-Se não, [`ready`](https://github.com/fastify/docs-portuguese/blob/master/docs/Server.md#ready)
+Se não, [`ready`](https://github.com/fastify/docs-portuguese/blob/main/docs/Server.md#ready)
 será concluido com um `Error` com de código `'ERR_AVVIO_PLUGIN_TIMEOUT'`.
 
 + Valor padrão: `10000`
@@ -289,7 +289,7 @@ const fastify = require('fastify')({
 <a name="versioning"></a>
 ### `versioning`
 
-Por padrão você pode versionar suas rotas com [semver versioning](https://github.com/fastify/docs-portuguese/blob/master/docs/Routes.md#version), que é provido por `find-my-way`. Existe também a opção de utilizar uma estratégia personalizada. Você pode encontrar mais informações na documentação do [find-my-way](https://github.com/delvedor/find-my-way#versioned-routes).
+Por padrão você pode versionar suas rotas com [semver versioning](https://github.com/fastify/docs-portuguese/blob/main/docs/Routes.md#version), que é provido por `find-my-way`. Existe também a opção de utilizar uma estratégia personalizada. Você pode encontrar mais informações na documentação do [find-my-way](https://github.com/delvedor/find-my-way#versioned-routes).
 
 ```js
 const versioning = {
@@ -317,7 +317,7 @@ const fastify = require('fastify')({
 
 + Valor padrão: `true`
 
-Por padrão, o Fastify irá adicionar as propriedades `ip`, `ips`, `hostname` e `log` no objeto request do Node (veja [`Request`](https://github.com/fastify/docs-portuguese/blob/master/docs/Request.md)) e a propriedade `log` no objeto response do Node. Altere o valor para `false` para prevenir que essas propriedades sejam adicionadas nos objetos nativos do Node.
+Por padrão, o Fastify irá adicionar as propriedades `ip`, `ips`, `hostname` e `log` no objeto request do Node (veja [`Request`](https://github.com/fastify/docs-portuguese/blob/main/docs/Request.md)) e a propriedade `log` no objeto response do Node. Altere o valor para `false` para prevenir que essas propriedades sejam adicionadas nos objetos nativos do Node.
 
 ```js
 const fastify = Fastify({ modifyCoreObjects: true }) // the default
@@ -331,9 +331,9 @@ fastify.get('/', (request, reply) => {
 })
 ```
 
-Desabilite essa opção pode ajudar em ambiente [serveless](https://github.com/fastify/docs-portuguese/blob/master/docs/Serverless.md) como Google Cloud Functions, onde `ip` e `ips` não são propriedades modificáveis.
+Desabilite essa opção pode ajudar em ambiente [serveless](https://github.com/fastify/docs-portuguese/blob/main/docs/Serverless.md) como Google Cloud Functions, onde `ip` e `ips` não são propriedades modificáveis.
 
-**Note que essas propriedades estão depreciadas e serão removidas na próxima versão Major do Fastify, assim como essa opção** Sendo então recomendado o uso das mesmas propriedades dos objetos [`Request`](https://github.com/fastify/docs-portuguese/blob/master/docs/Request.md) e [`Reply`](https://github.com/fastify/docs-portuguese/blob/master/docs/Reply.md).
+**Note que essas propriedades estão depreciadas e serão removidas na próxima versão Major do Fastify, assim como essa opção** Sendo então recomendado o uso das mesmas propriedades dos objetos [`Request`](https://github.com/fastify/docs-portuguese/blob/main/docs/Request.md) e [`Reply`](https://github.com/fastify/docs-portuguese/blob/main/docs/Reply.md).
 
 ```js
 const fastify = Fastify({ modifyCoreObjects: false })
@@ -396,7 +396,7 @@ const fastify = require('fastify')({
 
 <a name="server"></a>
 #### server
-`fastify.server`: Objeto nativo Node [server](https://nodejs.org/api/http.html#http_class_http_server) como retornado pela [**`Função Fastify factory`**](https://github.com/fastify/docs-portuguese/blob/master/docs/Server.md).
+`fastify.server`: Objeto nativo Node [server](https://nodejs.org/api/http.html#http_class_http_server) como retornado pela [**`Função Fastify factory`**](https://github.com/fastify/docs-portuguese/blob/main/docs/Server.md).
 
 <a name="after"></a>
 #### after
@@ -547,13 +547,13 @@ fastify.listen({
 
 <a name="route"></a>
 #### route
-Método para adicionar rotas no servidor, também existem funções abreviadas, confira [aqui](https://github.com/fastify/docs-portuguese/blob/master/docs/Routes.md).
+Método para adicionar rotas no servidor, também existem funções abreviadas, confira [aqui](https://github.com/fastify/docs-portuguese/blob/main/docs/Routes.md).
 
 <a name="close"></a>
 #### close
-`fastify.close(callback)`: chamar essa função encerra a instância do servidor e executa o hook [`'onClose'`](https://github.com/fastify/docs-portuguese/blob/master/docs/Hooks.md#on-close).<br>
+`fastify.close(callback)`: chamar essa função encerra a instância do servidor e executa o hook [`'onClose'`](https://github.com/fastify/docs-portuguese/blob/main/docs/Hooks.md#on-close).<br>
 Chamar `close` também faz com que o servidor responda com erro `503` para todas as requisições recebidas e destrua aquelas requisições.
-Confira em [`return503OnClosing` flags](https://github.com/fastify/docs-portuguese/blob/master/docs/Server.md#factory-return-503-on-closing) como alterar este comportamento.
+Confira em [`return503OnClosing` flags](https://github.com/fastify/docs-portuguese/blob/main/docs/Server.md#factory-return-503-on-closing) como alterar este comportamento.
 
 Se for chamada sem nenhum argumento, retorna uma `Promise`:
 
@@ -567,20 +567,20 @@ fastify.close().then(() => {
 
 <a name="decorate"></a>
 #### decorate*
-Função muito útil se você precisa 'decorar' a instância do Fastify, Reply ou Request, confira [aqui](https://github.com/fastify/docs-portuguese/blob/master/docs/Decorators.md).
+Função muito útil se você precisa 'decorar' a instância do Fastify, Reply ou Request, confira [aqui](https://github.com/fastify/docs-portuguese/blob/main/docs/Decorators.md).
 
 <a name="register"></a>
 #### register
 O Fastify permite que os usuários extenda suas funcionalidades com plugins.
-Um plugin pode ser um conjunto de rotas, 'decorações' ou o que quer que seja, confira [aqui](https://github.com/fastify/docs-portuguese/blob/master/docs/Plugins.md).
+Um plugin pode ser um conjunto de rotas, 'decorações' ou o que quer que seja, confira [aqui](https://github.com/fastify/docs-portuguese/blob/main/docs/Plugins.md).
 
 <a name="use"></a>
 #### use
-Função para adicionar ao Fastify, confira [aqui](https://github.com/fastify/docs-portuguese/blob/master/docs/Middleware.md).
+Função para adicionar ao Fastify, confira [aqui](https://github.com/fastify/docs-portuguese/blob/main/docs/Middleware.md).
 
 <a name="addHook"></a>
 #### addHook
-Função para adicionar um hook específico no ciclo de vida do Fastify, confira [aqui](https://github.com/fastify/docs-portuguese/blob/master/docs/Hooks.md).
+Função para adicionar um hook específico no ciclo de vida do Fastify, confira [aqui](https://github.com/fastify/docs-portuguese/blob/main/docs/Hooks.md).
 
 <a name="prefix"></a>
 #### prefix
@@ -624,21 +624,21 @@ Importante: Se você está lidando com plugins aninhados o nome divergirá com o
 
 <a name="log"></a>
 #### log
-A instância do logger, confira [aqui](https://github.com/fastify/docs-portuguese/blob/master/docs/Logging.md).
+A instância do logger, confira [aqui](https://github.com/fastify/docs-portuguese/blob/main/docs/Logging.md).
 
 <a name="inject"></a>
 #### inject
-Injeção falsa de http (para fins de teste), confira [aqui](https://github.com/fastify/docs-portuguese/blob/master/docs/Testing.md#inject).
+Injeção falsa de http (para fins de teste), confira [aqui](https://github.com/fastify/docs-portuguese/blob/main/docs/Testing.md#inject).
 
 <a name="add-schema"></a>
 #### addSchema
 `fastify.addSchema(schemaObj)`, adiciona um schema compartilhado na instância do Fastify. Possibilitará o reuso em todos os locais em sua aplicação simplesmente utilizando o id do schema que você precisa.<br/>
-Para aprender mais, veja [exemplo de schema compartilhado](https://github.com/fastify/docs-portuguese/blob/master/docs/Validation-and-Serialization.md#shared-schema) na documentação sobre [Validação e Serialização](https://github.com/fastify/docs-portuguese/blob/master/docs/Validation-and-Serialization.md).
+Para aprender mais, veja [exemplo de schema compartilhado](https://github.com/fastify/docs-portuguese/blob/main/docs/Validation-and-Serialization.md#shared-schema) na documentação sobre [Validação e Serialização](https://github.com/fastify/docs-portuguese/blob/main/docs/Validation-and-Serialization.md).
 
 <a name="set-reply-serializer"></a>
 #### setReplySerializer
-Configura o serializado de resposta para todas as rotas. Será utilizado como padrão se uma função [Reply.serializer(func)](https://github.com/fastify/docs-portuguese/blob/master/docs/Reply.md#serializerfunc) não foi fornecida. A função responsável para lidar com a serialização é totalmente encapsulada, sendo assim, por exemplo, pode conter diversas funções para lidar com erros.
-Note que: o parametro função `func` é chamado somente para status `2xx`. Confira [`setErrorHandler`](https://github.com/fastify/docs-portuguese/blob/master/docs/Server.md#seterrorhandler) para lidar com erros.
+Configura o serializado de resposta para todas as rotas. Será utilizado como padrão se uma função [Reply.serializer(func)](https://github.com/fastify/docs-portuguese/blob/main/docs/Reply.md#serializerfunc) não foi fornecida. A função responsável para lidar com a serialização é totalmente encapsulada, sendo assim, por exemplo, pode conter diversas funções para lidar com erros.
+Note que: o parametro função `func` é chamado somente para status `2xx`. Confira [`setErrorHandler`](https://github.com/fastify/docs-portuguese/blob/main/docs/Server.md#seterrorhandler) para lidar com erros.
 
 ```js
 fastify.setReplySerializer(function (payload, statusCode){
@@ -649,11 +649,11 @@ fastify.setReplySerializer(function (payload, statusCode){
 
 <a name="set-schema-compiler"></a>
 #### setSchemaCompiler
-Configura o schema do compilador para todas as rotas [aqui](https://github.com/fastify/docs-portuguese/blob/master/docs/Validation-and-Serialization.md#schema-compiler).
+Configura o schema do compilador para todas as rotas [aqui](https://github.com/fastify/docs-portuguese/blob/main/docs/Validation-and-Serialization.md#schema-compiler).
 
 <a name="set-schema-resolver"></a>
 #### setSchemaResolver
-Define o schema de resolução `$ref` para todas as rotas [here](https://github.com/fastify/docs-portuguese/blob/master/docs/Validation-and-Serialization.md#schema-resolver).
+Define o schema de resolução `$ref` para todas as rotas [here](https://github.com/fastify/docs-portuguese/blob/main/docs/Validation-and-Serialization.md#schema-resolver).
 
 
 <a name="schema-compiler"></a>
@@ -663,7 +663,7 @@ Esta propriedade pode ser usada para definir o compilador de schema, é uma abre
 <a name="set-not-found-handler"></a>
 #### setNotFoundHandler
 
-`fastify.setNotFoundHandler(handler(request, reply))`: define a função que irá lidar com status `404`. Essa função é encapsulada por prefixo, então diferentes plugins podem ser definidos para diferentes funções que lidam com situações 'não encontrado' se uma [opção `prefix`](https://github.com/fastify/docs-portuguese/blob/master/docs/Plugins.md#route-prefixing-option) for passada para `fastify.register()`. Tal função é tratada como uma função regular de rota então as requisições irão passar por todo [ciclo de vida do Fastify](https://github.com/fastify/docs-portuguese/blob/master/docs/Lifecycle.md#lifecycle).
+`fastify.setNotFoundHandler(handler(request, reply))`: define a função que irá lidar com status `404`. Essa função é encapsulada por prefixo, então diferentes plugins podem ser definidos para diferentes funções que lidam com situações 'não encontrado' se uma [opção `prefix`](https://github.com/fastify/docs-portuguese/blob/main/docs/Plugins.md#route-prefixing-option) for passada para `fastify.register()`. Tal função é tratada como uma função regular de rota então as requisições irão passar por todo [ciclo de vida do Fastify](https://github.com/fastify/docs-portuguese/blob/main/docs/Lifecycle.md#lifecycle).
 
 Você pode também registar um hook [`preValidation`](https://www.fastify.io/docs/latest/Hooks/#route-hooks) and [preHandler](https://www.fastify.io/docs/latest/Hooks/#route-hooks) para cuidar dos `404`.
 

@@ -1,6 +1,6 @@
 # Documentação em Português (BR)
 <div align="center">
-<img src="https://github.com/fastify/graphics/raw/master/full-logo.png" width="650" height="auto"/>
+<img src="https://github.com/fastify/graphics/raw/main/full-logo.png" width="650" height="auto"/>
 </div>
 
 <div align="center">
@@ -10,7 +10,7 @@
 ![](https://github.com/fastify/fastify/workflows/website/badge.svg)
 [![Build Status](https://dev.azure.com/fastify/fastify/_apis/build/status/fastify.fastify)](https://dev.azure.com/fastify/fastify/_build/latest?definitionId=1)
 [![Known Vulnerabilities](https://snyk.io/test/github/fastify/fastify/badge.svg)](https://snyk.io/test/github/fastify/fastify)
-[![Coverage Status](https://coveralls.io/repos/github/fastify/fastify/badge.svg?branch=master)](https://coveralls.io/github/fastify/fastify?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/fastify/fastify/badge.svg?branch=main)](https://coveralls.io/github/fastify/fastify?branch=main)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)
 
 </div>
@@ -81,7 +81,7 @@ fastify.listen(3000, (err, address) => {
 })
 ```
 
-Quer conhecer melhor? Acesse: <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Getting-Started.md"><code><b>Aquecendo</b></code></a>.
+Quer conhecer melhor? Acesse: <a href="https://github.com/fastify/docs-portuguese/blob/main/docs/Getting-Started.md"><code><b>Aquecendo</b></code></a>.
 
 ### Guia rápido sobre o Fastify CLI
 
@@ -116,7 +116,7 @@ O código-fonte do Fastify's **v1.x** está na [Branch 1.x](https://github.com/f
 
 > ## Nota
 > `.listen` restringe ao host local, `localhost`, interface de rede padrão (`127.0.0.1` or `::1`, a depender das configurações do sistema operacional). Se você está utilizando o Fastify em um container (Docker, [GCP](https://cloud.google.com/), etc.), você provavelmente deverá passar como parâmetro de restrição  `0.0.0.0`. Tenha cuidado ao decidir em escutar em todas as interfaces de rede; esta configuração vem com [riscos de segurança (english)](https://web.archive.org/web/20170711105010/https://snyk.io/blog/mongodb-hack-and-secure-defaults/) inerentes.
-> Veja a [documentação](https://github.com/fastify/docs-portuguese/blob/master/docs/Server.md#listen) para mais informações.
+> Veja a [documentação](https://github.com/fastify/docs-portuguese/blob/main/docs/Server.md#listen) para mais informações.
 
 ### Principais recursos
 
@@ -145,36 +145,36 @@ __Metodologia:__: `autocannon -c 100 -d 40 -p 10 localhost:3000` * 2, obtendo a 
 Benchmarks utilizando https://github.com/fastify/benchmarks. Este é um sintético, "hello world" benchmark que visa avalia a capacidade do framework. A capacidade que cada framework tem depende na sua aplicação, você deve __sempre__ avaliar se capacidade de resposta importa para você.
 
 ## Documentação
-* <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Getting-Started.md"><code><b>'Aquecendo'</b></code></a> &#10003;
-* <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Server.md"><code><b>Server</b></code></a> &#10003;
-* <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Routes.md"><code><b>Routes</b></code></a> &#10003;
-* <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Logging.md"><code><b>Logging</b></code></a> &#10003;
-* <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Middleware.md"><code><b>Middleware</b></code></a> &#10003;
-* <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Hooks.md"><code><b>Hooks</b></code></a> &#10003;
-* <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Decorators.md"><code><b>Decorators</b></code></a> &#10003;
-* <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Validation-and-Serialization.md"><code><b>Validação e Serialização</b></code></a> &#10003;
-* <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Fluent-Schema.md"><code><b>Fluent Schema</b></code></a> &#10003;
-* <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Lifecycle.md"><code><b>Ciclo de vida</b></code></a> &#10003;
-* <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Reply.md"><code><b>Resposta</b></code></a>
-* <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Request.md"><code><b>Requisição</b></code></a>
-* <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Errors.md"><code><b>Erros</b></code></a>
-* <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/ContentTypeParser.md"><code><b>Conversor de Content Type</b></code></a>
-* <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Plugins.md"><code><b>Plugins</b></code></a>
-* <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Testing.md"><code><b>Testando</b></code></a>
-* <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Benchmarking.md"><code><b>Benchmarking</b></code></a>
-* <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Write-Plugin.md"><code><b>Como escrever um bom plugin</b></code></a> &#10003;
-* <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Plugins-Guide.md"><code><b>Guia de Plugins</b></code></a>
-* <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/HTTP2.md"><code><b>HTTP2</b></code></a>
-* <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/LTS.md"><code><b>LTS - Suporte de longo prazo</b></code></a>
-* <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Typescript.md"><code><b>TypeScript e suporte a tipagem</b></code></a>
-* <a href="https://github.com/fastify/docs-portuguese/blob/master/docs/Serverless.md"><code><b>Sem servidor</b></code></a>
+* <a href="https://github.com/fastify/docs-portuguese/blob/main/docs/Getting-Started.md"><code><b>'Aquecendo'</b></code></a> &#10003;
+* <a href="https://github.com/fastify/docs-portuguese/blob/main/docs/Server.md"><code><b>Server</b></code></a> &#10003;
+* <a href="https://github.com/fastify/docs-portuguese/blob/main/docs/Routes.md"><code><b>Routes</b></code></a> &#10003;
+* <a href="https://github.com/fastify/docs-portuguese/blob/main/docs/Logging.md"><code><b>Logging</b></code></a> &#10003;
+* <a href="https://github.com/fastify/docs-portuguese/blob/main/docs/Middleware.md"><code><b>Middleware</b></code></a> &#10003;
+* <a href="https://github.com/fastify/docs-portuguese/blob/main/docs/Hooks.md"><code><b>Hooks</b></code></a> &#10003;
+* <a href="https://github.com/fastify/docs-portuguese/blob/main/docs/Decorators.md"><code><b>Decorators</b></code></a> &#10003;
+* <a href="https://github.com/fastify/docs-portuguese/blob/main/docs/Validation-and-Serialization.md"><code><b>Validação e Serialização</b></code></a> &#10003;
+* <a href="https://github.com/fastify/docs-portuguese/blob/main/docs/Fluent-Schema.md"><code><b>Fluent Schema</b></code></a> &#10003;
+* <a href="https://github.com/fastify/docs-portuguese/blob/main/docs/Lifecycle.md"><code><b>Ciclo de vida</b></code></a> &#10003;
+* <a href="https://github.com/fastify/docs-portuguese/blob/main/docs/Reply.md"><code><b>Resposta</b></code></a>
+* <a href="https://github.com/fastify/docs-portuguese/blob/main/docs/Request.md"><code><b>Requisição</b></code></a>
+* <a href="https://github.com/fastify/docs-portuguese/blob/main/docs/Errors.md"><code><b>Erros</b></code></a>
+* <a href="https://github.com/fastify/docs-portuguese/blob/main/docs/ContentTypeParser.md"><code><b>Conversor de Content Type</b></code></a>
+* <a href="https://github.com/fastify/docs-portuguese/blob/main/docs/Plugins.md"><code><b>Plugins</b></code></a>
+* <a href="https://github.com/fastify/docs-portuguese/blob/main/docs/Testing.md"><code><b>Testando</b></code></a>
+* <a href="https://github.com/fastify/docs-portuguese/blob/main/docs/Benchmarking.md"><code><b>Benchmarking</b></code></a>
+* <a href="https://github.com/fastify/docs-portuguese/blob/main/docs/Write-Plugin.md"><code><b>Como escrever um bom plugin</b></code></a> &#10003;
+* <a href="https://github.com/fastify/docs-portuguese/blob/main/docs/Plugins-Guide.md"><code><b>Guia de Plugins</b></code></a>
+* <a href="https://github.com/fastify/docs-portuguese/blob/main/docs/HTTP2.md"><code><b>HTTP2</b></code></a>
+* <a href="https://github.com/fastify/docs-portuguese/blob/main/docs/LTS.md"><code><b>LTS - Suporte de longo prazo</b></code></a>
+* <a href="https://github.com/fastify/docs-portuguese/blob/main/docs/Typescript.md"><code><b>TypeScript e suporte a tipagem</b></code></a>
+* <a href="https://github.com/fastify/docs-portuguese/blob/main/docs/Serverless.md"><code><b>Sem servidor</b></code></a>
 
-Documentation [English](https://github.com/fastify/fastify/blob/master/README.md)  
-中文文档[地址](https://github.com/fastify/docs-chinese/blob/master/README.md)
+Documentation [English](https://github.com/fastify/fastify/blob/main/README.md)  
+中文文档[地址](https://github.com/fastify/docs-chinese/blob/main/README.md)
 
 ## Ecossistema
-- [Core](https://github.com/fastify/docs-portuguese/blob/master/docs/Ecosystem.md#core) - Plugins mantidos pela [equipe](#equipe) _Fastify_ [team](#team).
-- [Comunidade](https://github.com/fastify/docs-portuguese/blob/master/docs/Ecosystem.md#comunidade) - Plugins mantidos pela Comunidade.
+- [Core](https://github.com/fastify/docs-portuguese/blob/main/docs/Ecosystem.md#core) - Plugins mantidos pela [equipe](#equipe) _Fastify_ [team](#team).
+- [Comunidade](https://github.com/fastify/docs-portuguese/blob/main/docs/Ecosystem.md#comunidade) - Plugins mantidos pela Comunidade.
 - [Exemplos (English)](https://github.com/fastify/example) - Multirepo com um conjunto de exemplos funcionais reais.
 
 ## Suporte

@@ -2,7 +2,7 @@
 
 ## Fluent Schema
 
-A documentação [Validação e Serialização](https://github.com/fastify/fastify/blob/master/docs/Validation-and-Serialization.md) descreve todos os parâmetros aceitos pelo Fastify para configurar Validações de shemas de JSON no intuito de validar o recebimento de dados e Serialização de schemas de JSON no intuto de otimizar o envido de dados.
+A documentação [Validação e Serialização](https://github.com/fastify/fastify/blob/main/docs/Validation-and-Serialization.md) descreve todos os parâmetros aceitos pelo Fastify para configurar Validações de shemas de JSON no intuito de validar o recebimento de dados e Serialização de schemas de JSON no intuto de otimizar o envido de dados.
 
 [`fluent-schema`](https://github.com/fastify/fluent-schema) pode ser utilizado para simplificar essa tarefa enquanto possibilita o reuso de constantes.
 
