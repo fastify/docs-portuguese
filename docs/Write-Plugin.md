@@ -10,10 +10,10 @@ Os principais princípios Fastify, é seu foco em performance, baixa sobrecarga 
 
 ## Code
 
-Fastify utiliza diferentes técnicas para otimzar seu código, grande parte delas estão documentadas em nossos Guias. Nós recomendamos fortemente que você leia [o guia do plugin](https://github.com/fastify/docs-portguese/blob/master/docs/Plugins-Guide.md) para conhecer toda API que você pode usar para construir seu plugin e aprender como usar-las.
+Fastify utiliza diferentes técnicas para otimzar seu código, grande parte delas estão documentadas em nossos Guias. Nós recomendamos fortemente que você leia [o guia do plugin](https://github.com/fastify/docs-portguese/blob/main/docs/Plugins-Guide.md) para conhecer toda API que você pode usar para construir seu plugin e aprender como usar-las.
 Tem alguma dúvida ou sugestão? Ficaremos felizes em ajudar! Basta abrir uma issue em nosso [repositório de ajuda](https://github.com/fastify/help).
 
-Você pode submeter um plugin em nosssa [lista de plugins](https://github.com/fastify/docs-portuguese/blob/master/docs/Ecosystem.md) que iremos revisar seu código e lhe ajudar a melhora-lo se necessário.
+Você pode submeter um plugin em nosssa [lista de plugins](https://github.com/fastify/docs-portuguese/blob/main/docs/Ecosystem.md) que iremos revisar seu código e lhe ajudar a melhora-lo se necessário.
 
 ## Documentation
 Documentação é extremamente importante. Se seu plugin não for bem documentado, nós não iremos aceita-lo em nossa lista de plugins. Falta de documentação de qualidade dificulta o uso do plugin por outras pessoas.

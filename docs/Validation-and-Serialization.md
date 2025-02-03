@@ -244,7 +244,7 @@ Esse exemplo vai retornar:
 
 Você pode fornecer uma lista de plugins que você deseja utilizar com Ajv:
 
-> Referência a [`ajv options`](https://github.com/fastify/fastify/blob/master/docs/Server.md#factory-ajv) para checar o formato dos plugins.
+> Referência a [`ajv options`](https://github.com/fastify/fastify/blob/main/docs/Server.md#factory-ajv) para checar o formato dos plugins.
 
 ```js
 const fastify = require('fastify')({
@@ -325,7 +325,7 @@ Fastify's [configuração base](https://github.com/epoberezkin/ajv#options-to-mo
   nullable: true     // suporte a palavra-chave "anulável" da especificação Open API 3.
 }
 ```
-Essa configuração base pode ser modificada fornecendo [`ajv.customOptions`] (https://github.com/fastify/fastify/blob/master/docs/Server.md#factory-ajv) à sua fábrica do Fastify.
+Essa configuração base pode ser modificada fornecendo [`ajv.customOptions`] (https://github.com/fastify/fastify/blob/main/docs/Server.md#factory-ajv) à sua fábrica do Fastify.
 
 Se você deseja alterar ou definir opções de configuração adicionais, será necessário criar sua própria instância e substituir a existente, como:
 ```js
@@ -769,4 +769,4 @@ const refToSharedSchemaDefinitions = {
 - [Ajv documentação](https://github.com/epoberezkin/ajv/blob/master/README.md)
 - [Ajv i18n](https://github.com/epoberezkin/ajv-i18n)
 - [Ajv custom errors](https://github.com/epoberezkin/ajv-errors)
-- Manipulação de erro personalizada com métodos principais com dumping de arquivo de erro [exemplo](https://github.com/fastify/example/tree/master/validation-messages)
+- Manipulação de erro personalizada com métodos principais com dumping de arquivo de erro [exemplo](https://github.com/fastify/example/tree/main/validation-messages)

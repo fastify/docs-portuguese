@@ -189,7 +189,7 @@ As alterações relacionadas ao TypeScript podem ser consideradas uma de duas ca
 * [`Core`](#tipagem-principal) - Os tipos incluídos no fastify
 * [`Plugins`](#tipagem-de-plugins) - Fastify plugins do ecossistema
 
-Leia nosso arquivo [`CONTRIBUTING.md`](https://github.com/fastify/fastify/blob/master/CONTRIBUTING.md) antes de começar para garantir que tudo corra bem!
+Leia nosso arquivo [`CONTRIBUTING.md`](https://github.com/fastify/fastify/blob/main/CONTRIBUTING.md) antes de começar para garantir que tudo corra bem!
 
 <a id="core-types"></a>
 ### Tipagem principal(Core)

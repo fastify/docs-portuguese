@@ -32,35 +32,35 @@ fastify.route(options)
 * `url`: o caminho da url para corresponder com a rota (alias: `path`).
 * `schema`: um objeto contendo o schema para a requisição e a resposta.
 Necessita estar no formato
-  [JSON Schema](http://json-schema.org/), confira [aqui](https://github.com/fastify/docs-portuguese/blob/master/docs/Validation-and-Serialization.md) para mais informações.
+  [JSON Schema](http://json-schema.org/), confira [aqui](https://github.com/fastify/docs-portuguese/blob/main/docs/Validation-and-Serialization.md) para mais informações.
 
   * `body`: valida o body `req.body` da requisição se for POST ou PUT..
   * `querystring` ou `query`: valida a querystring. Pode conter um objeto schema completo, com as propriedades `type` do `object` e `properties` do object dos parâmetros, ou simplesmente os valores que cada um deve conter nas propriedades do objeto, como mostrado abaixo.
   * `params`: valida os parâmetros `req.params`.
   * `response`: filtra e gera um schema para a resposta, definindo esta propriedade possibilita um acréscimo entre 10-20% de taxa de transferência. 
 * `attachValidation`: anexa `validationError` a requisição, se existir um schema de validação de erros, ao invés de enviar o erro ao handler.
-* `onRequest(request, reply, done)`: uma função [hook](https://github.com/fastify/docs-portuguese/blob/master/docs/Hooks.md#onrequest) que é acionada tão logo que uma requisição é recebida, também pode ser um array de funções.
-* `preParsing(request, reply, done)`: uma função [hook](https://github.com/fastify/docs-portuguese/blob/master/docs/Hooks.md#preparsing) acionada antes de realizar o `parse` da requisição, também pode ser um array de funções.
-* `preValidation(request, reply, done)`: uma função [hook](https://github.com/fastify/docs-portuguese/blob/master/docs/Hooks.md#prevalidation) acionada após os hooks `preValidation` compartilhados, muito útil se você precisa de realizar autenticação a nível de rota, por exemplo, também pode ser um array de funções.
-* `preHandler(request, reply, done)`: uma função [hook](https://github.com/fastify/docs-portuguese/blob/master/docs/Hooks.md#prehandler) acionada logo antes do `handler` da requisição, também pode ser um array de funções.
-* `preSerialization(request, reply, payload, done)`: uma função [hook](https://github.com/fastify/docs-portuguese/blob/master/docs/Hooks.md#preserialization) acionada logo antes da serialização, também pode ser um array de funções.
-* `onSend(request, reply, payload, done)`: uma função [hook](https://github.com/fastify/docs-portuguese/blob/master/docs/Hooks.md#route-hooks) acionada logo antes da resposta ser enviada, também pode ser um array de funções.
-* `onResponse(request, reply, payload, done)`: uma função [hook](https://github.com/fastify/docs-portuguese/blob/master/docs/Hooks.md#onresponse) acionada no momento que uma resposta foi enviada, so you will not be able to send more data to the client. It could also be an array of functions.
+* `onRequest(request, reply, done)`: uma função [hook](https://github.com/fastify/docs-portuguese/blob/main/docs/Hooks.md#onrequest) que é acionada tão logo que uma requisição é recebida, também pode ser um array de funções.
+* `preParsing(request, reply, done)`: uma função [hook](https://github.com/fastify/docs-portuguese/blob/main/docs/Hooks.md#preparsing) acionada antes de realizar o `parse` da requisição, também pode ser um array de funções.
+* `preValidation(request, reply, done)`: uma função [hook](https://github.com/fastify/docs-portuguese/blob/main/docs/Hooks.md#prevalidation) acionada após os hooks `preValidation` compartilhados, muito útil se você precisa de realizar autenticação a nível de rota, por exemplo, também pode ser um array de funções.
+* `preHandler(request, reply, done)`: uma função [hook](https://github.com/fastify/docs-portuguese/blob/main/docs/Hooks.md#prehandler) acionada logo antes do `handler` da requisição, também pode ser um array de funções.
+* `preSerialization(request, reply, payload, done)`: uma função [hook](https://github.com/fastify/docs-portuguese/blob/main/docs/Hooks.md#preserialization) acionada logo antes da serialização, também pode ser um array de funções.
+* `onSend(request, reply, payload, done)`: uma função [hook](https://github.com/fastify/docs-portuguese/blob/main/docs/Hooks.md#route-hooks) acionada logo antes da resposta ser enviada, também pode ser um array de funções.
+* `onResponse(request, reply, payload, done)`: uma função [hook](https://github.com/fastify/docs-portuguese/blob/main/docs/Hooks.md#onresponse) acionada no momento que uma resposta foi enviada, so you will not be able to send more data to the client. It could also be an array of functions.
 * `handler(request, reply)`: a função que vai lidar com o tratamento/processamento da requisição.
-* `schemaCompiler(schema)`: a função que irá realizar a construção das funções de validação para cada schema. Confira [aqui](https://github.com/fastify/docs-portuguese/blob/master/docs/Validation-and-Serialization.md#schema-compiler)
+* `schemaCompiler(schema)`: a função que irá realizar a construção das funções de validação para cada schema. Confira [aqui](https://github.com/fastify/docs-portuguese/blob/main/docs/Validation-and-Serialization.md#schema-compiler)
 * `bodyLimit`: previne que o `parser` padrão de JSON de interpretar conteúdos maiores que o valor definido __em bytes__. *Tem que ser um valor inteiro*. Você pode também definir essa opção globalmente quando estiver criando a instância do Fastify no objeto de opções de parâmetro __options__ em `fastify(options)`. O valor padrão é `1048576` (1 MiB).
 * `logLevel`: define o nível do log para a rota. Confira o exemplo abaixo.
 * `logSerializers`: define o serializador do log para a rota.
 * `config`: objeto usado para armazenar configurações personalizadas.
-* `version`: uma string [semver](http://semver.org/) compatível que define a versão do endpoint. [Exemplo](https://github.com/fastify/docs-portuguese/blob/master/docs/Routes.md#version).
+* `version`: uma string [semver](http://semver.org/) compatível que define a versão do endpoint. [Exemplo](https://github.com/fastify/docs-portuguese/blob/main/docs/Routes.md#version).
 * `prefixTrailingSlash`: string usada para determinar como lidar uma rota `/` e um prefixo.
   * `both` (__padrão__): Registrá-la ambas `/prefix` e `/prefix/`.
   * `slash`: Registrá-la somente `/prefix/`.
   * `no-slash`: Registrá-la somente `/prefix`.
 
-  `request` é definida em [Request](https://github.com/fastify/docs-portuguese/blob/master/docs/Request.md).
+  `request` é definida em [Request](https://github.com/fastify/docs-portuguese/blob/main/docs/Request.md).
 
-  `reply` é definida em [Reply](https://github.com/fastify/docs-portuguese/blob/master/docs/Reply.md).
+  `reply` é definida em [Reply](https://github.com/fastify/docs-portuguese/blob/main/docs/Reply.md).
 
 
 Examplo:
@@ -295,7 +295,7 @@ Confira a opção e rota `prefixTrailingSlash` acima para modificar este comport
 Pode acontecer de você precisar de diferentes níveis de log em suas rotas e o Fastify realiza isso de uma maneira bastante simples.<br/>
 Você precisa apenas passar a opção `logLevel` como o objeto opção para do plugin ou da rota com o [valor](https://github.com/pinojs/pino/blob/master/docs/API.md#discussion-3) que você precisa.
 
-Esteja ciente que, se você definir o `logLevel` a nível de plugin, também serão afetados os parâmetros do servidor [`setNotFoundHandler`](https://github.com/fastify/docs-portuguese/blob/master/docs/Server.md#setnotfoundhandler) and [`setErrorHandler`](https://github.com/fastify/docs-portuguese/blob/master/docs/Server.md#seterrorhandler).
+Esteja ciente que, se você definir o `logLevel` a nível de plugin, também serão afetados os parâmetros do servidor [`setNotFoundHandler`](https://github.com/fastify/docs-portuguese/blob/main/docs/Server.md#setnotfoundhandler) and [`setErrorHandler`](https://github.com/fastify/docs-portuguese/blob/main/docs/Server.md#seterrorhandler).
 
 ```js
 // server.js
@@ -425,4 +425,4 @@ Se você declarar múltiplas versões com o mesmo Major or Minor, Fastify irá s
 Se a requisição não tem o cabeçalho `Accept-Version` definido, retornará um erro `404`.
 
 #### Custom
-É possível definir uma lógica personalizada de versionamento. Que pode ser realizado através da configuração [`versioning`](https://github.com/fastify/docs-portuguese/blob/master/docs/Server.md#versioning), enquanto cria a instãncia do servidor Fastify.
+É possível definir uma lógica personalizada de versionamento. Que pode ser realizado através da configuração [`versioning`](https://github.com/fastify/docs-portuguese/blob/main/docs/Server.md#versioning), enquanto cria a instãncia do servidor Fastify.

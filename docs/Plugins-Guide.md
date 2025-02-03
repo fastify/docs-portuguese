@@ -19,7 +19,7 @@ O Fastify foi construído desde o início para ser um sistema extremamente modul
 
 ## Register
 Como no JavaScript, onde tudo é um objeto, no Fastify tudo é um plugin. <br>
-Suas rotas, seus utilitários e assim por diante são todos plugins. Para adicionar um novo plug-in, qualquer que seja sua funcionalidade, no Fastify você possui uma API agradável e exclusiva: [`register`](https://github.com/fastify/fastify/blob/master/docs/Plugins.md) .
+Suas rotas, seus utilitários e assim por diante são todos plugins. Para adicionar um novo plug-in, qualquer que seja sua funcionalidade, no Fastify você possui uma API agradável e exclusiva: [`register`](https://github.com/fastify/fastify/blob/main/docs/Plugins.md) .
 
 ```js
 fastify.register (
@@ -74,7 +74,7 @@ console.log(util('that is ', 'awesome'))
 E agora você importará seu utilitário em todos os arquivos em que você precisar. (E não esqueça que você provavelmente também precisará dele em seus testes).
 
 O Fastify oferece uma maneira mais elegante e confortável de fazer isso **decoradores**.
-Criar um decorador é extremamente fácil, basta usar a API [`decorate`](https://github.com/fastify/fastify/blob/master/docs/Decorators.md):
+Criar um decorador é extremamente fácil, basta usar a API [`decorate`](https://github.com/fastify/fastify/blob/main/docs/Decorators.md):
 ```js
 fastify.decorate('util', (a, b) => a + b)
 ```
@@ -178,7 +178,7 @@ fastify.get('/happiness', (request, reply) => {
 })
 ```
 
-Vimos como estender a funcionalidade do servidor e como lidar com o sistema de encapsulamento, mas e se você precisar adicionar uma função que deve ser executada sempre que o servidor "[emitir] (https://github.com/fastify/fastify/blob/master/docs/Lifecycle.md)" um evento?
+Vimos como estender a funcionalidade do servidor e como lidar com o sistema de encapsulamento, mas e se você precisar adicionar uma função que deve ser executada sempre que o servidor "[emitir] (https://github.com/fastify/fastify/blob/main/docs/Lifecycle.md)" um evento?
 
 <a name="hooks"></a>
 ## Ganchos
@@ -198,7 +198,7 @@ fastify.get('/plugin2', (request, reply) => {
 ```
 Acho que todos concordamos que isso é terrível. Código repetido, legibilidade terrível e não pode ser dimensionado.
 
-Então, o que você pode fazer para evitar esse problema irritante? Sim, você está certo, use um [gancho](https://github.com/fastify/fastify/blob/master/docs/Hooks.md)! <br>
+Então, o que você pode fazer para evitar esse problema irritante? Sim, você está certo, use um [gancho](https://github.com/fastify/fastify/blob/main/docs/Hooks.md)! <br>
 
 ```js
 fastify.decorate('util', (request, key, value) => { request[key] = value })
@@ -245,7 +245,7 @@ Como você provavelmente já deve ter percebido, `request` e` reply` não são o
 
 <a name="middleware"></a>
 ## Middleware
-Fastify [suporta] (https://github.com/fastify/fastify/blob/master/docs/Middleware.md) Express/Restify/Connect middleware pronto para uso, o que significa que você pode simplesmente entrar seu código antigo e funcionará! *(mais rápido, a propósito)* <br>
+Fastify [suporta] (https://github.com/fastify/fastify/blob/main/docs/Middleware.md) Express/Restify/Connect middleware pronto para uso, o que significa que você pode simplesmente entrar seu código antigo e funcionará! *(mais rápido, a propósito)* <br>
 Digamos que você esteja chegando do Express e já tenha um Middleware que faça exatamente o que você precisa e não queira refazer todo o trabalho.
 Como podemos fazer isso? Confira nosso mecanismo de middleware, [middie](https://github.com/fastify/middie).
 ```js
@@ -276,7 +276,7 @@ module.exports = fp(dbPlugin)
 ```
 Você também pode dizer ao `fastify-plugin` para verificar a versão instalada do Fastify, caso precise de uma API específica.
 
-Como mencionamos anteriormente, o Fastify começa a carregar seus plugins __after__ `.listen()`, `.inject()` ou `.ready()` são chamados e, como tal, __after__ foram declarados. Isso significa que, embora o plug-in possa injetar variáveis na instância de fastify externa via [`decorate`](https://github.com/fastify/fastify/blob/master/docs/Decorators.md), as variáveis decoradas não vão estar acessível antes de chamar `.listen()`, `.inject()` ou `.ready()`.
+Como mencionamos anteriormente, o Fastify começa a carregar seus plugins __after__ `.listen()`, `.inject()` ou `.ready()` são chamados e, como tal, __after__ foram declarados. Isso significa que, embora o plug-in possa injetar variáveis na instância de fastify externa via [`decorate`](https://github.com/fastify/fastify/blob/main/docs/Decorators.md), as variáveis decoradas não vão estar acessível antes de chamar `.listen()`, `.inject()` ou `.ready()`.
 
 Caso você confie em uma variável injetada por um plug-in anterior e queira passar isso no argumento `options` do` register`, você pode fazer isso usando uma função em vez de um objeto:
 ```js

@@ -8,10 +8,10 @@
 
 É provável que erros não capturados causem vazamentos de memória, vazamentos no descritor de arquivos e outros problemas importantes em produção. [Domínios](https://nodejs.org/en/docs/guides/domain-postmortem/) foram introduzidos para tentar corrigir esse problema, mas não o fizeram. Dado que não é possível processar todos os erros não detectados de maneira sensata, a melhor maneira de lidar com eles no momento é [travar](https://nodejs.org/api/process.html#process_warning_using_uncaughtexception_correctly). Em caso de promessas, certifique-se de [manipular](https://nodejs.org/dist/latest-v8.x/docs/api/deprecations.html#deprecations_dep0018_unhandled_promise_rejections) erros [corretamente] (https://github.com/mcollina/make-promises-safe).
 
-O Fastify segue uma abordagem do tipo tudo ou nada e visa ser o mais enxuto e otimizado possível. Assim, o desenvolvedor é responsável por garantir que os erros sejam tratados corretamente. Como a maioria dos erros geralmente resulta de dados de entrada inesperados, recomendamos especificar uma [validação JSON.schema](https://github.com/fastify/fastify/blob/master/docs/Validation-and-Serialization.md) para seus dados de entrada.
+O Fastify segue uma abordagem do tipo tudo ou nada e visa ser o mais enxuto e otimizado possível. Assim, o desenvolvedor é responsável por garantir que os erros sejam tratados corretamente. Como a maioria dos erros geralmente resulta de dados de entrada inesperados, recomendamos especificar uma [validação JSON.schema](https://github.com/fastify/fastify/blob/main/docs/Validation-and-Serialization.md) para seus dados de entrada.
 
 Observe que o Fastify não captura erros não capturados em rotas baseadas em retorno de chamada para você, portanto, qualquer erro não capturado resultará em uma falha.
-Se as rotas forem declaradas como `async` - o erro será capturado com segurança pela promessa e roteado para o manipulador de erros padrão do Fastify para uma resposta genérica do `Internal Server Error`. Para personalizar esse comportamento, você deve usar [setErrorHandler](https://github.com/fastify/fastify/blob/master/docs/Server.md#seterrorhandler).
+Se as rotas forem declaradas como `async` - o erro será capturado com segurança pela promessa e roteado para o manipulador de erros padrão do Fastify para uma resposta genérica do `Internal Server Error`. Para personalizar esse comportamento, você deve usar [setErrorHandler](https://github.com/fastify/fastify/blob/main/docs/Server.md#seterrorhandler).
 
 <a name="fastify-error-codes"></a>
 ### Fastify códigos de erro

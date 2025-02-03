@@ -11,7 +11,7 @@ Request é um objeto nativo do Fastify que contém os seguintes campos (propried
 - `id` - o `id` da requisição
 - `log` - a instância do logger da requisição recebida
 - `ip` - o endereço IP da requisição recebida
-- `ips` - um array de endereços IP dentro da propriedade `X-Forwarded-For` do cabeçalho da requisição recebida (somente quando a opção [`trustProxy`](https://github.com/fastify/docs-portuguese/blob/master/docs/Server.md#factory-trust-proxy) estiver ativa)
+- `ips` - um array de endereços IP dentro da propriedade `X-Forwarded-For` do cabeçalho da requisição recebida (somente quando a opção [`trustProxy`](https://github.com/fastify/docs-portuguese/blob/main/docs/Server.md#factory-trust-proxy) estiver ativa)
 - `hostname` - o hostname da requisição recebida
 
 ```js
